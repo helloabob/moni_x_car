@@ -71,6 +71,7 @@
     _numberOfTabs=numberOfTabs;
     
     if (numberOfTabs==8) {
+        [menuArray release];
         menuArray=[[NSArray alloc]initWithObjects:@"firmware",@"general",@"throttle",@"brake",@"boost",@"turbo",@"data",@"default", nil];
     }
     

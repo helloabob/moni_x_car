@@ -1418,7 +1418,7 @@
 				INFOPLIST_FILE = "moni_te/moni_te-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinapay.wifilink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinapay.xcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "62b74ec8-8d4e-44a2-842a-1107cb7662df";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1437,7 +1437,7 @@
 				GCC_PREFIX_HEADER = "moni_te/moni_te-Prefix.pch";
 				INFOPLIST_FILE = "moni_te/moni_te-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinapay.wifilink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinapay.xcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "62b74ec8-8d4e-44a2-842a-1107cb7662df";
 				VALID_ARCHS = "armv7 armv7s";

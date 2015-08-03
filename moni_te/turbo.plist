@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>runmode</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Forword/Brake,Forward/Brake/Reverse,Forward/Reverse</string>
+		<key>KeysRange</key>
+		<string>0-2</string>
+		<key>PreCode</key>
+		<string>0xa4</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>1.“正转带刹车” 模式
+车辆仅能前进和刹车，但不能倒车，该模式通常用于竞赛。 
+2.“正反转带刹车”模式 
+提供了倒车功能，通常用于训练。采用“双击式倒车”方式，即油门摇杆在第一次从中点区域推至反向区域时，电机只是刹车，不会产生倒车动作；当油门摇杆快速回到中立点区域并第二次推至反向区域时，如果此时电机已停止，则产生倒车动作，如果电机未停止，则不会倒车，仍是刹车，需要再次将油门回到中点并推向反向区，此时如果电机已经停止才会倒车，这样做的目的是防止车辆行驶过程中因多次点刹而造成误倒车。
+3.“直接正反转”模式 
+采用单击式倒车方式，即油门摇杆从中点区域推至反向区域时，电机立即产生倒车动作，该模式一般用于攀岩车等特种车辆。
+			</string>
+			<key>en</key>
+			<string>Option 1: “Forward Only with Brake” The car will only go forward and have brakes, but reverse is disabled. This mode is suitable for competition purposes.
+Option 2: “Forward/Reverse with Brake” This mode provides a reverse function, which is suitable for practice. 
+Option 3: “Forward / Reverse” When moving from the forward zone to the backward zone, the ESC will engage reverse immediately. This mode is intended for rock crawling applications, where instant control is required.
+			</string>
+		</dict>
+	</dict>
+	<key>threversespd</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>25%,50%,75%,100%</string>
+		<key>KeysRange</key>
+		<string>0-3</string>
+		<key>PreCode</key>
+		<string>0xe8</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>指油门摇杆打到反向最大的位置所能产生的最大倒车力度，选择不同的参数值可以产生不同的倒车速度（一般情况下推荐使用比较小的倒车速度，以免因倒车太快而导致失误）。</string>
+			<key>en</key>
+			<string>This setting alters the speed of the car when in reverse, as a percentage of the forward speed.</string>
+		</dict>
+	</dict>
+	<key>voltagecutoff</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>1</string>
+		<key>ValuesRange</key>
+		<string>Disable,Auto,3.0V-11.1V</string>
+		<key>KeysRange</key>
+		<string>0-83</string>
+		<key>PreCode</key>
+		<string>0xec</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>这项功能主要是防止锂电池过度放电而造成不可恢复的损坏。 
+如果开启了电压保护，运行中电调会时刻监视电池电压，一旦电压低于设定的阈值，在3秒内动力输出将逐步降为正常功率的30%，此时车手应立即靠边退出比赛，以免阻碍赛道上的其他车辆或被后面快车撞到，</string>
+			<key>en</key>
+			<string>This setting defines the low voltage cutoff for use with LiPo batteries,preventing over discharging. The ESC detects the battery’s voltage at any time, if the voltage is lower than the threshold for 2 seconds, the output power will be reduced 80%,and the red LED flashes 。 There are three main options for the cutoff setting. 
+Option 1: “None” – No voltage cutoff is used. Select for use with NiCD or NiMH battery types.
+Option 2: “Auto” – The ESC detects the number of cells present in the battery pack used, and selects a suitable cut-off voltage. 
+Option 3: “User Selected” – The level of the Voltage cutoff is defined by the user. The setting selected is for the overall battery voltage. The cutoff can be set from 3.0v – 11.1v, with steps of 0.1v.
+</string>
+		</dict>
+	</dict>
+	<key>escheatprotect</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>1</string>
+		<key>ValuesRange</key>
+		<string>85 Degree Celsius,105 Degree Celsius,125 Degree Celsius,Disable</string>
+		<key>KeysRange</key>
+		<string>0-3</string>
+		<key>PreCode</key>
+		<string>0xef</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>启用该功能后，电调或有感无刷电机温升达到厂方预设特定值时自动关闭输出，而且绿灯会闪烁，直到温度降低才恢复输出。</string>
+			<key>en</key>
+			<string>If this function is selected, the output power will be cut-off if the internal temperature of the ESC hits the set level for 3 seconds. When the protection activates, the LED will flash</string>
+		</dict>
+	</dict>
+	<key>motorrotation</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>1</string>
+		<key>ValuesRange</key>
+		<string>Normal,reverse</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+		<key>PreCode</key>
+		<string>0xe7</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>设置向前的时候，车向前走，设置向后的时候，车向后走。用在有的车和别的车走向相反的时候。</string>
+			<key>en</key>
+			<string>Control the running direction of the car, the paraments can be set according ,to your require to charge the motor rotation.</string>
+		</dict>
+	</dict>
+	<key>switchpoint1</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>49</string>
+		<key>ValuesRange</key>
+		<string>1%-99%</string>
+		<key>KeysRange</key>
+		<string>0-98</string>
+		<key>PreCode</key>
+		<string>0xea</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>前段加速度和后段加速度的分界点。</string>
+			<key>en</key>
+			<string>This setting defines the point in the forward throttle position at which the punch rate changes.</string>
+		</dict>
+	</dict>
+	<key>punchrate1</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>14</string>
+		<key>ValuesRange</key>
+		<string>1-30</string>
+		<key>KeysRange</key>
+		<string>0-29</string>
+		<key>PreCode</key>
+		<string>0xe6</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>前半段加速度我们分为30个档位可调整，当设为 1时，则油门加速较慢，对于快速加油门时的输出有较多的限制；当设置值越大，则加速越快，对油门输出的限制越少，一般情况下，对于油门能够控制的很好的车手，可以将加速度设置较高，以减小电调对油门响应的限制。</string>
+			<key>en</key>
+			<string>This is the level of punch used in the first stage of the punch range, before the switch point. Setting 1 is least punch, with 30 being the most.</string>
+		</dict>
+	</dict>
+	<key>punchrate2</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>14</string>
+		<key>ValuesRange</key>
+		<string>1-30</string>
+		<key>KeysRange</key>
+		<string>0-29</string>
+		<key>PreCode</key>
+		<string>0xeb</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>后半段加速度我们分为30个档位可调整，当设为 1时，则油门加速较慢，对于快速加油门时的输出有较多的限制；当设置值越大，则加速越快，对油门输出的限制越少，一般情况下，对于油门能够控制的很好的车手，可以将加速度设置较高，以减小电调对油门响应的限制。</string>
+			<key>en</key>
+			<string>This is the level of punch used in the second stage of the punch range, after the switch point. Setting 1 is least punch, with 30 being the most.</string>
+		</dict>
+	</dict>
+	<key>thcurve</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Linear,Custom</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+		<key>PreCode</key>
+		<string>0xe9</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>该参数调整正向油门板机和电调实际输出油门值之间的对应关系。 
+默认为线性的，也可以通过连接电脑使用 USB Link 软件调为非线性的，比如调成+EXP 的曲线，这样头段就会输出比线性时要大，头段的输出就会更有力，如果调为 –EXP 的曲线，则头段输出比线性时小，这样头段输出就比较柔和。
+			</string>
+			<key>en</key>
+			<string>This setting is used to define the input throttle curve into the ESC. 
+Option 1: “Linear” – This is where the forward throttle position of the transmitter directly relates to the forward throttle position into the ESC.
+Option 2: “Custom” – This allows for a multi-step setting to the forward throttle. This differs from exponential on the transmitter, in that the forward throttle input into the ESC can be defined in multiple increasing steps.
+			</string>
+		</dict>
+	</dict>
+	<key>dragbrake</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>10</string>
+		<key>ValuesRange</key>
+		<string>0%-100%</string>
+		<key>KeysRange</key>
+		<string>0-100</string>
+		<key>PreCode</key>
+		<string>0xe4</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>拖刹又名自动刹车，是指当油门摇杆收油后处于中点区域内时电机产生的刹车力，这样做可以辅助手指去控制刹车，有效降低刹车的控制难度，常用于平跑车减速入弯及出弯等场合。注：越野及大脚车不太适用。</string>
+			<key>en</key>
+			<string>This setting sets the amount of drag brake applied at neutral throttle to simulate a slight braking effect. The level can be set as a percentage of the overall backward throttle.</string>
+		</dict>
+	</dict>
+	<key>brakestrength</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>6</string>
+		<key>ValuesRange</key>
+		<string>0%,12.50%,25%,37.50%,50%,62.50%,75%,87.50%,100%</string>
+		<key>KeysRange</key>
+		<string>0-8</string>
+		<key>PreCode</key>
+		<string>0xe3</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>本电调提供比例式刹车功能，刹车力度的大小和油门摇杆的位置相关，最大刹车力是指油门摇杆处于刹车极限位置时所产生的刹车力。请根据车辆和赛道具体情况及个人的使用习惯，选择合适的最大刹车力度参数。</string>
+			<key>en</key>
+			<string>This settings defines the overall brake level as a percentage of the backward throttle. A higher value will result in stronger brakes.</string>
+		</dict>
+	</dict>
+	<key>initialbrake</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Equal Drag Brake,0%,20%,30%,40%</string>
+		<key>KeysRange</key>
+		<string>0-4</string>
+		<key>PreCode</key>
+		<string>0xed</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>也叫做最小刹车力度，是指在刹车初始位置作用于电机上的刹车力，默认值是等于拖刹力度，以便形成柔顺的刹车效果，如果初始刹车力设置得较大，可以达到类似点刹的效果。</string>
+			<key>en</key>
+			<string>This setting refers to the level of braking applied in the initial portion of the backward throttle. The default value is equal to the drag brake force, so the brake effect can be very smoothly.</string>
+		</dict>
+	</dict>
+	<key>switchpoint2</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>49</string>
+		<key>ValuesRange</key>
+		<string>1%-99%</string>
+		<key>KeysRange</key>
+		<string>0-98</string>
+		<key>PreCode</key>
+		<string>0xee</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>刹车分段点，刹车力度比1，刹车力度比2，此三个参数是用于控制刹车油门输出快慢的，设置适合的刹车油门加速度则可以辅助车手对刹车力度的控制，避免刹车过猛。 
+整个油门行程共分为 100份，这100份分为前后独立可调的两段。加速度我们分为20个档位可调整，当设为 1时，则对刹车响应有较多的限制，当设置值越大时，对刹车油门的限制越少，一般情况下，对于能够熟练控制刹车的车手，可以设置较高的加速度，以减小电调对刹车油门响应的限制。
+</string>
+			<key>en</key>
+			<string>This setting defines the point in the backward throttle position at which the brake rate changes.</string>
+		</dict>
+	</dict>
+	<key>brakerate1</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>19</string>
+		<key>ValuesRange</key>
+		<string>1-20</string>
+		<key>KeysRange</key>
+		<string>0-19</string>
+		<key>PreCode</key>
+		<string>0xa6</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>刹车分段点，刹车力度比1，刹车力度比2，此三个参数是用于控制刹车油门输出快慢的，设置适合的刹车油门加速度则可以辅助车手对刹车力度的控制，避免刹车过猛。 
+整个油门行程共分为 100份，这100份分为前后独立可调的两段。加速度我们分为20个档位可调整，当设为 1时，则对刹车响应有较多的限制，当设置值越大时，对刹车油门的限制越少，一般情况下，对于能够熟练控制刹车的车手，可以设置较高的加速度，以减小电调对刹车油门响应的限制。
+</string>
+			<key>en</key>
+			<string>This is the level of brake rate used in the first stage of the range, before the switch point. Setting 1 is least braking rate, with 30 being the most.</string>
+		</dict>
+	</dict>
+	<key>brakerate2</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>19</string>
+		<key>ValuesRange</key>
+		<string>1-20</string>
+		<key>KeysRange</key>
+		<string>0-19</string>
+		<key>PreCode</key>
+		<string>0xa7</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>刹车分段点，刹车力度比1，刹车力度比2，此三个参数是用于控制刹车油门输出快慢的，设置适合的刹车油门加速度则可以辅助车手对刹车力度的控制，避免刹车过猛。 
+整个油门行程共分为 100份，这100份分为前后独立可调的两段。加速度我们分为20个档位可调整，当设为 1时，则对刹车响应有较多的限制，当设置值越大时，对刹车油门的限制越少，一般情况下，对于能够熟练控制刹车的车手，可以设置较高的加速度，以减小电调对刹车油门响应的限制。
+</string>
+			<key>en</key>
+			<string>This is the level of brake rate used in the second stage of the range, after the switch point. Setting 1 is least braking rate, with 30 being the most.</string>
+		</dict>
+	</dict>
+	<key>brakecurve</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Linear,Custom</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+		<key>PreCode</key>
+		<string>0xe1</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>该参数调整刹车油门行程和刹车力度对应关系。默认为线性的，也可以通过连接电脑使用 USB Link 软件调为非线性的，达到分配刹车力靠前或靠后的效果。</string>
+			<key>en</key>
+			<string>This setting is used to define the input brake curve into the ESC. 
+Option 1: “Linear” – This is where the backward position of the transmitter directly relates to the backward throttle position into the ESC.
+Option 2: “Custom” – This allows for a multi-step setting to the throttle. This differs from exponential on the transmitter, in that the backward throttle input into the ESC can be defined in multiple increasing steps.
+			</string>
+		</dict>
+	</dict>
+	<key>boosttiming</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>0deg-64deg</string>
+		<key>KeysRange</key>
+		<string>0-64</string>
+		<key>PreCode</key>
+		<string>0xe5</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>此进角在整个油门行程范围内有效，直接影响弯路和直路的速度。 
+当设定了此值后，电调在运行过程中的实际进角是根据转速大小而动态变化的，并非固定的常量，此值的大小则表示当电机转速大于设置的Boost 结束转速后所能开启的最大Boost 进角值。
+			</string>
+			<key>en</key>
+			<string>This setting sets the total amount of boost timing added across the boost RPM range.</string>
+		</dict>
+	</dict>
+	<key>startrpm1</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>28</string>
+		<key>ValuesRange</key>
+		<string>1000-35000</string>
+		<key>KeysRange</key>
+		<string>0-68</string>
+		<key>PreCode</key>
+		<string>0xa3</string>
+		<key>Modes</key>
+		<string>,1,2,5,6,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>Boost 值是根据转速来动态分配的，当转速低于起始转速时，则Boost 实际开启值为0, 在转速处于起始转速和结束转速之间时，Boost 是根据当时转速的大小来动态变化的。 
+如果设置项“Boost随RPM变化方式”设置为线性时，则Boost 值在这段范围内是线性分配的。 
+举个例子，假设 Boost Timing 设置为5度，起始转速为10000,结束转速为15000,则各个转速下的Boost 进角值如下表所示。如果转速高于结束转速时，则Boost实际开启值则为Boost 设置值。
+</string>
+			<key>en</key>
+			<string>This setting defines the RPM at which the boost timing is started to be added.</string>
+		</dict>
+	</dict>
+	<key>endrpm</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>44</string>
+		<key>ValuesRange</key>
+		<string>3000-60000</string>
+		<key>KeysRange</key>
+		<string>0-114</string>
+		<key>PreCode</key>
+		<string>0xa8</string>
+		<key>Modes</key>
+		<string>,1,2,5,6,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>Boost 值是根据转速来动态分配的，当转速低于起始转速时，则Boost 实际开启值为0, 在转速处于起始转速和结束转速之间时，Boost 是根据当时转速的大小来动态变化的。 
+如果设置项“Boost随RPM变化方式”设置为线性时，则Boost 值在这段范围内是线性分配的。 
+举个例子，假设 Boost Timing 设置为5度，起始转速为10000,结束转速为15000,则各个转速下的Boost 进角值如下表所示。如果转速高于结束转速时，则Boost实际开启值则为Boost 设置值。
+</string>
+			<key>en</key>
+			<string>This setting defines the RPM at which the full level of boost timing is applied.</string>
+		</dict>
+	</dict>
+	<key>slope</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Linear,Custom</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+		<key>PreCode</key>
+		<string>0xa9</string>
+		<key>Modes</key>
+		<string>,1,2,5,6,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>分为线性和非线性两种方式：当设置为线性时，则每度Boost 对应的转速是一致的，当设置为非线性时，可以自由定义每度Boost Timing 值对应的转速。这种设置方式非常灵活，调整得当可以兼顾启动爆发力和马达发热量。</string>
+			<key>en</key>
+			<string>This setting controls how the boost timing is applied within the RPM range. There are two options for this setting.
+Option 1: “Linear” – This applies the boost in a linear manner within the RPM Range. The ESC calculates the rate of addition of boost, based off of Setting 21, 22 And 23.
+Option 2: “Custom” – This allows for a non-linear addition of Boost timing within the RPM range. The boost can be applied in multiple increasing steps throughout the range.
+			</string>
+		</dict>
+	</dict>
+	<key>stability</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Yes,No</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+		<key>PreCode</key>
+		<string>0xaa</string>
+		<key>Modes</key>
+		<string>,1,2,5,6,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>如果选择受油门控制，则Boost 的值不但受转速控制，还受油门大小的控制，当25% 的油门时，则最大只能开启16度的Boost 进角，当50% 油门时，最大只能开启 32度的Boost 进角，100%全油时，才可以开启64度的Boost进角，选择受油门控制后，整个油门行程的头段会变得更柔顺，马达发热更低，但是启动爆发力则差一些。</string>
+			<key>en</key>
+			<string>This setting is a limit for the boost timing addition, in relation to the throttle position, which can aid car stability whilst on throttle. If enabled, the ESC will monitor the throttle position and Motor RPM, and limit the maximum amount of available boost timing.
+E.g. If the boost timing is set to 36 points and the boost end RPM setting has been achieved, but the throttle position is only 50%, then only 32 points (50% of 64 points) of boost will be applied.</string>
+		</dict>
+	</dict>
+	<key>turbotiming</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>10</string>
+		<key>ValuesRange</key>
+		<string>0deg-64deg</string>
+		<key>KeysRange</key>
+		<string>0-64</string>
+		<key>PreCode</key>
+		<string>0xa1</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>激爆进角。这个是进角的大小设置项,适用于在较长的直道上才开启，释放出马达的最大功率。 
+警告！开启Boost 进角和Turbo进角能够有效提升马达的输出功率，通常用于竞赛，请事先仔细查看说明书及参考设定，并在测试时监控马达及电调的温度，调整合适的进角设定及最终齿比，过激的进角设定及最终齿比会导致电调或马达烧毁。</string>
+			<key>en</key>
+			<string>This setting sets the total amount of turbo timing that can be applied.</string>
+		</dict>
+	</dict>
+	<key>activationmethod</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Full TH,RPM,Full TH+RPM</string>
+		<key>KeysRange</key>
+		<string>0-2</string>
+		<key>PreCode</key>
+		<string>0xab</string>
+		<key>Modes</key>
+		<string>,1,2,3,4,5,6,7,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>这个是定义启动的方法。</string>
+			<key>en</key>
+			<string>This defines he activation method for the addition of turbo timing.</string>
+		</dict>
+	</dict>
+	<key>turbodelay</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>6</string>
+		<key>ValuesRange</key>
+		<string>Instant,0.05-1</string>
+		<key>KeysRange</key>
+		<string>0-15</string>
+		<key>PreCode</key>
+		<string>0xa2</string>
+		<key>Modes</key>
+		<string>,1,2,3,4,5,6,7,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>这个是TURBO进角开启延时的时间</string>
+			<key>en</key>
+			<string>This setting is used to define the rpm value at which turbo is activated.</string>
+		</dict>
+	</dict>
+	<key>startrpm2</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>12</string>
+		<key>ValuesRange</key>
+		<string>8000rpm-50000rpm</string>
+		<key>KeysRange</key>
+		<string>0-42</string>
+		<key>PreCode</key>
+		<string>0xac</string>
+		<key>Modes</key>
+		<string>,,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>这个是TURBO开启所用的转速</string>
+			<key>en</key>
+			<string>This setting is used to define the rpm value at which turbo is activated.</string>
+		</dict>
+	</dict>
+	<key>turboslopeon</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>4</string>
+		<key>ValuesRange</key>
+		<string>3deg/0.1S-30deg/0.1S,Instant</string>
+		<key>KeysRange</key>
+		<string>0-10</string>
+		<key>PreCode</key>
+		<string>0xad</string>
+		<key>Modes</key>
+		<string>,1,2,3,4,5,6,7,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>当条件满足以后，进角被激活的快慢。</string>
+			<key>en</key>
+			<string>This setting relates to the rate of engagement when the activation conditions are met, the rate is define in points added per 0.1s a higher value means faster addition of turbo timing.</string>
+		</dict>
+	</dict>
+	<key>turboslopeoff</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>3</string>
+		<key>ValuesRange</key>
+		<string>6deg/0.1S-30deg/0.1S,Instant</string>
+		<key>KeysRange</key>
+		<string>0-5</string>
+		<key>PreCode</key>
+		<string>0xa5</string>
+		<key>Modes</key>
+		<string>,1,2,3,4,5,6,7,</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>当条件满足以后，进角被释放的快慢。</string>
+			<key>en</key>
+			<string>This setting relates to the disengatement of the turbo timing which can help to avoid a large breaking effect when coming off the throttle woth high turbo levels,the rate of disengage is defined as points per 0.1s,with a higher value meaning a faster disengagement.</string>
+		</dict>
+	</dict>
+	<key>becout</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>6.0V,7.4V</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+		<key>PreCode</key>
+		<string>0xe0</string>
+		<key>Modes</key>
+		<string>,0,1,2,3,4,5,6,7,8</string>
+	</dict>
+	<key>battminvoltage</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>0-255</string>
+		<key>KeysRange</key>
+		<string>0-255</string>
+		<key>PreCode</key>
+		<string>0xff</string>
+	</dict>
+	<key>escmaxtemp</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>0-255</string>
+		<key>KeysRange</key>
+		<string>0-255</string>
+		<key>PreCode</key>
+		<string>0xff</string>
+	</dict>
+	<key>motmaxtemp</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>0-255</string>
+		<key>KeysRange</key>
+		<string>0-255</string>
+		<key>PreCode</key>
+		<string>0xff</string>
+	</dict>
+	<key>motmaxrpm</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>0-255</string>
+		<key>KeysRange</key>
+		<string>0-255</string>
+		<key>PreCode</key>
+		<string>0xff</string>
+	</dict>
+	<key>turboklvl</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>0-50</string>
+		<key>KeysRange</key>
+		<string>0-50</string>
+		<key>PreCode</key>
+		<string>0xe0</string>
+	</dict>
+	<key>turbotlvl</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>0-20</string>
+		<key>KeysRange</key>
+		<string>0-20</string>
+		<key>PreCode</key>
+		<string>0xe2</string>
+	</dict>
+	<key>modes</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Cvawlev,Stock 17.5T,Buggy SOT,Pvactice,Sport,Stock 10.5T,Stock 13.5T,Modify,Zevo Timing</string>
+		<key>KeysRange</key>
+		<string>0-8</string>
+		<key>PreCode</key>
+		<string>0xff</string>
+		<key>desc</key>
+		<dict>
+			<key>cn</key>
+			<string>把不同的参数组合在一起，供车手选择</string>
+			<key>en</key>
+			<string>All in one ,up to ten profiles can be stored in the memory and improted or exported easily,factory pre-set profiles include blinky mode,modify mode,stock mode,practice mode,offroad mode,drift mode,crawler mode</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

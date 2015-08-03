@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BrakeType</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Brake Off,Soft Brake,Mid Brake,Hard Brake</string>
+		<key>KeysRange</key>
+		<string>0-3</string>
+	</dict>
+	<key>BatteryType</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>1</string>
+		<key>ValuesRange</key>
+		<string>NiCd/NiMH,LiPo,LiFe</string>
+		<key>KeysRange</key>
+		<string>0-2</string>
+	</dict>
+	<key>CutOffVoltageThreshold</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>1</string>
+		<key>ValuesRange</key>
+		<string>2.8V/50%,3.0V/60%,3.2V/65%,No Protection</string>
+		<key>KeysRange</key>
+		<string>0-3</string>
+	</dict>
+	<key>LowVoltageCutOffType</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Reduce Power,Cut Off Power</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+	</dict>
+	<key>StartUpStrength</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>4</string>
+		<key>ValuesRange</key>
+		<string>10%,15%,20%,25%,30%,35%,40%,45%,50%</string>
+		<key>KeysRange</key>
+		<string>0-8</string>
+	</dict>
+	<key>MotorTiming</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Auto,2°,8°,15°,22°,30°</string>
+		<key>KeysRange</key>
+		<string>0-5</string>
+	</dict>
+	<key>SBECVoltageOutput</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>5.0V,6.0V,7.4V,8.4V</string>
+		<key>KeysRange</key>
+		<string>0-3</string>
+	</dict>
+	<key>MotorRotation</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>Forward,Reverse</string>
+		<key>KeysRange</key>
+		<string>0-1</string>
+	</dict>
+	<key>GovernorMode</key>
+	<dict>
+		<key>DefaultKey</key>
+		<string>0</string>
+		<key>ValuesRange</key>
+		<string>RPM OFF,1st Soft Start,2nd Soft Start,1st Governor Mode,2nd Governor Mode
+</string>
+		<key>KeysRange</key>
+		<string>0-4</string>
+	</dict>
+</dict>
+</plist>

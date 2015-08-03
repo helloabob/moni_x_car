@@ -1,0 +1,41 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import "UIBaseImageView.h"
+#import "UIBaseButton.h"
+#import "Global.h"
+#import "NetUtils.h"
+#endif
+
+//1表示ZTW  2表示OEM
+#define APP_VERSION 1
+
+#define IsIOS7System  [[UIDevice currentDevice].systemVersion floatValue]>=7.0
+#define IsiPhone5  [UIScreen mainScreen].bounds.size.height>480
+
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+
+#define kAddObserver(a,b) [[NSNotificationCenter defaultCenter] addObserver:self selector:a name:b object:nil];
+
+#define kPostNotif(a,b) [[NSNotificationCenter defaultCenter] postNotificationName:a object:b userInfo:nil];
+
+#define kRemoveNotif(a) [[NSNotificationCenter defaultCenter] removeObserver:self name:a object:nil]
+
+#define LocalizableString(a) [NSString stringWithFormat:@"%@_%d",a,[Global language]]
+
+#if 1
+#define NSLog(...) {}
+#endif

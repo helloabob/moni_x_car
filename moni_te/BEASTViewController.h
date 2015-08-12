@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "UITabView.h"
 
-@interface BEASTViewController : BaseViewController<UIActionSheetDelegate>
+@interface BEASTViewController : BaseViewController<UIActionSheetDelegate,UITabViewDelegate>
 
 @end

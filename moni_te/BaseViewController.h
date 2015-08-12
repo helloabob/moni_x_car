@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ParamButtonView2.h"
+
 @interface BaseViewController : UIViewController<UITextViewDelegate>
 @property(nonatomic,retain)UIImageView *backImageView;
 @property(nonatomic,retain)UIView *contentView;
@@ -23,7 +25,10 @@
 /*2期*/
 @property(nonatomic,assign)int pbvWidth;
 @property(nonatomic,retain)NSArray *offsetXArray;
- 
+@property(nonatomic,assign)int offset_y;
+@property(nonatomic,assign)int padding_y;
+
+
 -(void)sendSetData:(NSData *)data;
 -(void)renderImage;
 -(void)changeSettingY:(int)y;

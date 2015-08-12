@@ -18,6 +18,7 @@ static unsigned char result[11];
 @interface BEASTViewController (){
     UIImageView *logo;
     TSLocateView *locateView;
+    UITabView *tabView;
 }
 
 @end
@@ -117,54 +118,86 @@ static unsigned char result[11];
 //    [btn addTarget:self action:@selector(showdefault) forControlEvents:UIControlEventTouchUpInside];
 //    [self.contentView addSubview:btn];
     
-    ParamButtonView *pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], 30, self.pbvWidth, 65) withImageName:@"runningmode" withDelegate:self]autorelease];
+    tabView=[[[UITabView alloc]initWithFrame:CGRectMake(4, 3, self.contentView.bounds.size.width-8, self.contentView.bounds.size.height-6)]autorelease];
+    tabView.delegate=self;
+    [self.contentView addSubview:tabView];
+    tabView.numberOfTabs=3;
+    
+    
+    /*tab 1*/
+    UIView *view=[tabView viewForIndex:0];
+    ParamButtonView *pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 50, self.pbvWidth, 65) withImageName:@"device" withDelegate:self]autorelease];
+    pbv1.tag=500;
+    [view addSubview:pbv1];
+    pbv1.valueString=@"X-CAR";
+    pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 120, self.pbvWidth, 65) withImageName:@"hardware" withDelegate:self]autorelease];
+    pbv1.tag=501;
+    [view addSubview:pbv1];
+    pbv1.valueString=@"X-CAR PCS";
+    pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 190, self.pbvWidth, 65) withImageName:@"software" withDelegate:self]autorelease];
+    pbv1.tag=502;
+    [view addSubview:pbv1];
+    pbv1.valueString=@"V1.01";
+    
+    /*tab 2*/
+    view=[tabView viewForIndex:1];
+    ParamButtonView2 *pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"runningmode" withDelegate:self]autorelease];
     pbv.tag=2;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[0] intValue], 100, self.pbvWidth, 65) withImageName:@"mt" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"mt" withDelegate:self]autorelease];
     pbv.tag=5;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"Normal";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], 100, self.pbvWidth, 65) withImageName:@"ic" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"ic" withDelegate:self]autorelease];
     pbv.tag=6;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"High";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[2] intValue], 100, self.pbvWidth, 65) withImageName:@"mr" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"mr" withDelegate:self]autorelease];
     pbv.tag=10;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"Normal";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[0] intValue], 170, self.pbvWidth, 65) withImageName:@"tpr" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"tpr" withDelegate:self]autorelease];
     pbv.tag=8;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"60%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], 170, self.pbvWidth, 65) withImageName:@"tl" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"tl" withDelegate:self]autorelease];
     pbv.tag=7;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"50%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[2] intValue], 170, self.pbvWidth, 65) withImageName:@"nr" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"nr" withDelegate:self]autorelease];
     pbv.tag=9;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"4%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[0] intValue], 240, self.pbvWidth, 65) withImageName:@"pb" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"pb" withDelegate:self]autorelease];
     pbv.tag=3;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"50%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], 240, self.pbvWidth, 65) withImageName:@"pdb" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"pdb" withDelegate:self]autorelease];
     pbv.tag=4;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"0%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[2] intValue], 240, self.pbvWidth, 65) withImageName:@"cov" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"cov" withDelegate:self]autorelease];
     pbv.tag=1;
-    [self.contentView addSubview:pbv];
+    [view addSubview:pbv];
     pbv.valueString=@"3.0V/Cell";
 }
 
@@ -186,8 +219,25 @@ static unsigned char result[11];
     [super returnToDefault];
 }
 
+-(void)viewDidChanged:(int)index{
+    if (index==0) {
+        self.SettingControlViewHidden=YES;
+    }else{
+        self.SettingControlViewHidden=NO;
+    }
+}
+-(BOOL)tabDidClicked:(int)index{
+    if (index==2) {
+        [self showAlert];
+        return NO;
+    }
+    return YES;
+}
+
 -(void)viewDidTapped:(ParamButtonView *)sender{
-    
+    if (sender.tag > 400) {
+        return;
+    }
     if (g_tag==sender.tag) {
         return;
     }

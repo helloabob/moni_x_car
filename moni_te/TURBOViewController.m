@@ -105,25 +105,26 @@ static ParamButtonView *g_pbv;
     
     /*tab 1*/
     UIView *view=[tabView viewForIndex:0];
-    ParamButtonView *pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"device" withDelegate:self]autorelease];
-    pbv.tag=500;
-    pbv.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
-    [view addSubview:pbv];
-    pbv.valueString=@"CAR ESC";
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"hardware" withDelegate:self]autorelease];
-    pbv.tag=501;
-    pbv.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
-    [view addSubview:pbv];
-    pbv.valueString=@"TURBO";
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"software" withDelegate:self]autorelease];
-    pbv.tag=502;
-    pbv.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
-    [view addSubview:pbv];
-    pbv.valueString=@"V1.1";
+    ParamButtonView *pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"device" withDelegate:self]autorelease];
+    pbv1.tag=500;
+    pbv1.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
+    [view addSubview:pbv1];
+    pbv1.valueString=@"CAR ESC";
+    pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"hardware" withDelegate:self]autorelease];
+    pbv1.tag=501;
+    pbv1.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
+    [view addSubview:pbv1];
+    pbv1.valueString=@"TURBO";
+    pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"software" withDelegate:self]autorelease];
+    pbv1.tag=502;
+    pbv1.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
+    [view addSubview:pbv1];
+    pbv1.valueString=@"V1.1";
     
     /*tab 2*/
+    self.offset_y = 130;
     view=[tabView viewForIndex:1];
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"promode" withDelegate:self]autorelease];
+    ParamButtonView2 *pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"promode" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"modes"];
     pbv.paramReadOnly=YES;
     pbv.tag=10001;
@@ -131,206 +132,238 @@ static ParamButtonView *g_pbv;
     modeIndex=[Global promode];
     pbv.valueString=pbv.values[modeIndex];
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"runmode" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"runmode" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"runmode"];
     pbv.tag=1000;
     [view addSubview:pbv];
     pbv.valueString=@"Forword/Brake";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"voltagecutoff" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"voltagecutoff" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"voltagecutoff"];
     pbv.tag=1002;
     [view addSubview:pbv];
     pbv.valueString=@"Auto";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"escheatprotect" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"escheatprotect" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"escheatprotect"];
     pbv.tag=1003;
     [view addSubview:pbv];
     pbv.valueString=@"105 Degree Celsius";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"mr" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"mr" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"motorrotation"];
     pbv.tag=1004;
     [view addSubview:pbv];
     pbv.valueString=@"reverse";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"becout" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"becout" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"becout"];
     pbv.tag=1031;
     [view addSubview:pbv];
     pbv.valueString=@"6.0V";
     
     /*tab 3*/
+    self.offset_y = 130;
     view=[tabView viewForIndex:2];
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[3] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"punchrate1" withDelegate:self]autorelease];
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[3] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"punchrate1" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"punchrate1"];
     pbv.tag=1006;
     [view addSubview:pbv];
     pbv.valueString=@"15";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[4] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"punchrate2" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[4] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"punchrate2" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"punchrate2"];
     pbv.tag=1007;
     [view addSubview:pbv];
     pbv.valueString=@"15";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"threversespd" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"threversespd" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"threversespd"];
     pbv.tag=1001;
     [view addSubview:pbv];
     pbv.valueString=@"25%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"switchpoint1" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"switchpoint1" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"switchpoint1"];
     pbv.tag=1005;
     [view addSubview:pbv];
     pbv.valueString=@"50%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"thcurve" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"thcurve" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"thcurve"];
     pbv.tag=1008;
     [view addSubview:pbv];
     pbv.valueString=@"Linear";
     
     /*tab 4*/
+    self.offset_y = 130;
     view=[tabView viewForIndex:3];
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-120, self.pbvWidth, 65) withImageName:@"initialbrake" withDelegate:self]autorelease];
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"initialbrake" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"initialbrake"];
     pbv.tag=1011;
     [view addSubview:pbv];
     pbv.valueString=@"Equal Drag Brake";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"dragbrake" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"dragbrake" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"dragbrake"];
     pbv.tag=1009;
     [view addSubview:pbv];
     pbv.valueString=@"10%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"brakestrength" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"brakestrength" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"brakestrength"];
     pbv.tag=1010;
     [view addSubview:pbv];
     pbv.valueString=@"75%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-60, self.pbvWidth, 65) withImageName:@"brakerate1" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"brakerate1" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"brakerate1"];
     pbv.tag=1013;
     [view addSubview:pbv];
     pbv.valueString=@"20";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY, self.pbvWidth, 65) withImageName:@"switchpoint2" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"switchpoint2" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"switchpoint2"];
     pbv.tag=1012;
     [view addSubview:pbv];
     pbv.valueString=@"50%";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY, self.pbvWidth, 65) withImageName:@"brakerate2" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"brakerate2" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"brakerate2"];
     pbv.tag=1014;
     [view addSubview:pbv];
     pbv.valueString=@"20";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY, self.pbvWidth, 65) withImageName:@"brakecurve" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"brakecurve" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"brakecurve"];
     pbv.tag=1015;
     [view addSubview:pbv];
     pbv.valueString=@"Linear";
     
     /*tab 5*/
+    self.offset_y = 130;
     view=[tabView viewForIndex:4];
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[3] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"boosttiming" withDelegate:self]autorelease];
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[3] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"boosttiming" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"boosttiming"];
     pbv.tag=1016;
     [view addSubview:pbv];
     pbv.valueString=@"0deg";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[4] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"startrpm" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[4] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"startrpm" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"startrpm1"];
     pbv.tag=1017;
     [view addSubview:pbv];
     pbv.valueString=@"15000";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"endrpm" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"endrpm" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"endrpm"];
     pbv.tag=1018;
     [view addSubview:pbv];
     pbv.valueString=@"25000";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"stability" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"stability" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"stability"];
     pbv.tag=1020;
     [view addSubview:pbv];
     pbv.valueString=@"Yes";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"slope" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"slope" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"slope"];
     pbv.tag=1019;
     [view addSubview:pbv];
     pbv.valueString=@"Linear";
     
     /*tab 6*/
+    self.offset_y = 130;
     view=[tabView viewForIndex:5];
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"turbotiming" withDelegate:self]autorelease];
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"turbotiming" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"turbotiming"];
     pbv.tag=1021;
     [view addSubview:pbv];
     pbv.valueString=@"10deg";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"activationmethod" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"activationmethod" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"activationmethod"];
     pbv.tag=1022;
     [view addSubview:pbv];
     pbv.valueString=@"Full TH";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"turbodelay" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"turbodelay" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"turbodelay"];
     pbv.tag=1023;
     [view addSubview:pbv];
     pbv.valueString=@"3";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"startrpm" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"startrpm" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"startrpm2"];
     pbv.tag=1024;
     [view addSubview:pbv];
     pbv.valueString=@"20000rpm";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"turboslopeon" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"turboslopeon" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"turboslopeon"];
     pbv.tag=1025;
     [view addSubview:pbv];
     pbv.valueString=@"15deg/0.1S";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"turboslopeoff" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"turboslopeoff" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"turboslopeoff"];
     pbv.tag=1026;
     [view addSubview:pbv];
     pbv.valueString=@"24deg/0.1S";
     
     /*tab 7*/
+    self.offset_y = 130;
     view=[tabView viewForIndex:6];
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-105, self.pbvWidth, 65) withImageName:@"battminvoltage" withDelegate:self]autorelease];
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"battminvoltage" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"battminvoltage"];
     pbv.tag=1027;
     pbv.paramReadOnly=YES;
     [view addSubview:pbv];
     pbv.valueString=@"unknown";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"escmaxtemp" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"escmaxtemp" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"escmaxtemp"];
     pbv.tag=1028;
     pbv.paramReadOnly=YES;
     [view addSubview:pbv];
     pbv.valueString=@"unknown";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"motmaxtemp" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"motmaxtemp" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"motmaxtemp"];
     pbv.tag=1029;
     pbv.paramReadOnly=YES;
     [view addSubview:pbv];
     pbv.valueString=@"unknown";
     
-    pbv=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], contentCenterY-35, self.pbvWidth, 65) withImageName:@"motmaxrpm" withDelegate:self]autorelease];
+    self.offset_y += self.padding_y;
+    pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"motmaxrpm" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"motmaxrpm"];
     pbv.tag=1030;
     pbv.paramReadOnly=YES;

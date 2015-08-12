@@ -11,6 +11,7 @@
 #import "SettingControlView.h"
 #import "MBProgressHUD.h"
 
+
 static int old_y;
 
 @interface BaseViewController (){
@@ -79,12 +80,14 @@ static int old_y;
     
 //    maskView=[[UIView alloc]initWithFrame:_backImageView.bounds];
     
+    /*控制发送接收区域*/
     scv=[[[SettingControlView alloc]initWithFrame:CGRectMake(10, self.contentView.bounds.size.height-100-50, screenWidth-20, 100)]autorelease];
     scv.hidden=YES;
     old_y=scv.center.y;
     [scv addTarget:self actionRead:@selector(onRead) actionSet:@selector(onSet)];
     [self.contentView addSubview:scv];
     
+    /*大黑板显示内容区域*/
     blackArea=[[[UIImageView alloc]initWithFrame:CGRectMake(10, 40, screenWidth-20, 115)] autorelease];
     blackArea.image=[[UIImage imageNamed:@"blackarea"] stretchableImageWithLeftCapWidth:100 topCapHeight:100];
     blackArea.hidden=YES;
@@ -105,8 +108,13 @@ static int old_y;
     
     
     /*2期*/
-    _pbvWidth = screenWidth/320.0*100.0;
-    self.offsetXArray = @[@1, @(6+_pbvWidth), @(11+_pbvWidth*2), @((screenWidth-10-2*_pbvWidth-5)/2), @((screenWidth-10-2*_pbvWidth-5)/2+_pbvWidth+5)];
+//    _pbvWidth = screenWidth/320.0*100.0;
+    _pbvWidth = screenWidth - 40;
+    self.offsetXArray = @[@20,@20,@20,@20,@20];
+//    self.offsetXArray = @[@1, @(6+_pbvWidth), @(11+_pbvWidth*2), @((screenWidth-10-2*_pbvWidth-5)/2), @((screenWidth-10-2*_pbvWidth-5)/2+_pbvWidth+5)];
+    
+    _offset_y = 60;
+    _padding_y = 35;
     
 }
 -(void)didEndBackground:(NSNotification *)notif{

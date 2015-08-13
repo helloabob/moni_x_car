@@ -60,7 +60,7 @@ static int old_y;
     bottomToolbar=[[[UIView alloc]initWithFrame:CGRectMake(4, _backImageView.bounds.size.height-34, screenWidth-8, 30)]autorelease];
     [viewBack addSubview:bottomToolbar];
     
-    UIImageView *toolbarcenter=[[[UIImageView alloc]initWithFrame:CGRectMake(bottomToolbar.bounds.size.width/2-115, 0, 230, 30)]autorelease];
+    UIImageView *toolbarcenter=[[[UIImageView alloc]initWithFrame:CGRectMake(45, 0, screenWidth-90, 30)]autorelease];
     toolbarcenter.image=[UIImage imageNamed:@"toolbarcenter"];
     [bottomToolbar addSubview:toolbarcenter];
     

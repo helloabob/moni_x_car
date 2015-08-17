@@ -227,7 +227,7 @@
         
         titleImageView=[[[UIImageView alloc]initWithFrame:CGRectMake(15, 5, 120, frame.size.height-10)]autorelease];
         titleImageView.backgroundColor = [UIColor clearColor];
-        titleImageView.contentMode=UIViewContentModeScaleAspectFit;
+        titleImageView.contentMode=UIViewContentModeCenter;
         [self addSubview:titleImageView];
         
         UIView *innerView=[[[UIView alloc]initWithFrame:CGRectMake(rect.origin.x+5, 0, rect.size.width-10, rect.size.height)]autorelease];

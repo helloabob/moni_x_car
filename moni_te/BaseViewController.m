@@ -49,7 +49,7 @@ static int old_y;
     [self.view addSubview:viewBack];
 //    _backImageView=[[[UIImageView alloc]initWithFrame:CGRectMake(0, IsIOS7System?20:0, 320, IsiPhone5?548:460)]autorelease];
     _backImageView=[[[UIImageView alloc]initWithFrame:viewBack.bounds]autorelease];
-    _backImageView.image=[UIImage imageNamed:@"BlueBackImage"];
+    _backImageView.image=[UIImage imageNamed:@"app_back"];
     [viewBack addSubview:_backImageView];
     
 //    _contentView=[[[UIView alloc]initWithFrame:_backImageView.frame]autorelease];

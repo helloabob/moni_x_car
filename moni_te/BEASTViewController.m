@@ -103,7 +103,7 @@ static unsigned char result[11];
     self.keyArray=@[@"CutOffVoltage",@"RunningMode",@"PercentageBraking",@"PercentageDragBrake",@"MotorTiming",@"InitialAcceleration",@"ThrottleLimit",@"ThrottlePercentReverse",@"NeutralRange",@"MotorRotation"];
     self.dict=[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"beast" ofType:@"plist"]];
     
-    self.backImageView.image=[UIImage imageNamed:@"FlashBackImage"];
+//    self.backImageView.image=[UIImage imageNamed:@"FlashBackImage"];
     self.SettingControlViewHidden=NO;
     
 //    UIBaseButton *btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(250, 3, 39, 38)]autorelease];

@@ -75,7 +75,7 @@ static unsigned char result[8];
     self.keyArray=@[@"BrakeType",@"BatteryType",@"CutOffVoltageThreshold",@"LowVoltageCutOffType",@"StartUpStrength",@"MotorTiming",@"MotorRotation"];
     self.dict=[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"gecko" ofType:@"plist"]];
     
-    self.backImageView.image=[UIImage imageNamed:@"FlashBackImage"];
+//    self.backImageView.image=[UIImage imageNamed:@"FlashBackImage"];
     
     tabView=[[[UITabView alloc]initWithFrame:CGRectMake(4, 3, self.contentView.bounds.size.width-8, self.contentView.bounds.size.height-6)]autorelease];
     tabView.delegate=self;

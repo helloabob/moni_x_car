@@ -23,12 +23,12 @@
         self.commonImageName=@"connectfailalert";
         self.delegate=delegate;
         
-        UIBaseButton *btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(25, 95, 67, 21)]autorelease];
+        UIBaseButton *btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(35, 107, 40, 10)]autorelease];
         btn.offImageName=@"buttonyes_off";
         btn.onImageName=@"buttonyes_on";
         [btn addTarget:self action:@selector(reconnect) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
-        btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(115, 95, 67, 21)]autorelease];
+        btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(130, 107, 40, 10)]autorelease];
         btn.offImageName=@"buttonquit_off";
         btn.onImageName=@"buttonquit_on";
         [btn addTarget:self action:@selector(quit) forControlEvents:UIControlEventTouchUpInside];

@@ -57,23 +57,23 @@ static int old_y;
     _contentView=[[[UIView alloc]initWithFrame:_backImageView.bounds]autorelease];
     [viewBack addSubview:_contentView];
     
-    bottomToolbar=[[[UIView alloc]initWithFrame:CGRectMake(4, _backImageView.bounds.size.height-34, screenWidth-8, 30)]autorelease];
+    bottomToolbar=[[[UIView alloc]initWithFrame:CGRectMake(0, _backImageView.bounds.size.height-30, screenWidth, 30)]autorelease];
     [viewBack addSubview:bottomToolbar];
     
-    UIImageView *toolbarcenter=[[[UIImageView alloc]initWithFrame:CGRectMake(45, 0, screenWidth-90, 30)]autorelease];
-    toolbarcenter.image=[UIImage imageNamed:@"toolbarcenter"];
-    [bottomToolbar addSubview:toolbarcenter];
+//    UIImageView *toolbarcenter=[[[UIImageView alloc]initWithFrame:CGRectMake(45, 0, screenWidth-90, 30)]autorelease];
+//    toolbarcenter.image=[UIImage imageNamed:@"toolbarcenter"];
+//    [bottomToolbar addSubview:toolbarcenter];
     
     baseButton=[[[UIBaseButton alloc]initWithFrame:CGRectMake(0, 0, 80, 30)]autorelease];
-    baseButton.offImageName=@"toolbarexit_off";
-    baseButton.onImageName=@"toolbarexit_on";
+    baseButton.offImageName=@"exit_button_w";
+    baseButton.onImageName=@"exit_button_o";
     [baseButton addTarget:self action:@selector(onExit) forControlEvents:UIControlEventTouchUpInside];
     [baseButton renderImage];
     [bottomToolbar addSubview:baseButton];
     
     UIButton *btn=[[[UIButton alloc]initWithFrame:CGRectMake(bottomToolbar.bounds.size.width-80, 0, 80, 30)]autorelease];
-    [btn setImage:[UIImage imageNamed:@"toolbarlanguage_off"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"toolbarlanguage_on"] forState:UIControlStateHighlighted];
+    [btn setImage:[UIImage imageNamed:@"language_button_w"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"language_button_o"] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(changeLanguage) forControlEvents:UIControlEventTouchUpInside];
     [bottomToolbar addSubview:btn];
     
@@ -89,7 +89,7 @@ static int old_y;
     
     /*大黑板显示内容区域*/
     blackArea=[[[UIImageView alloc]initWithFrame:CGRectMake(10, 40, screenWidth-20, 115)] autorelease];
-    blackArea.image=[[UIImage imageNamed:@"blackarea"] stretchableImageWithLeftCapWidth:100 topCapHeight:100];
+    blackArea.image=[[UIImage imageNamed:@"tooltip_area"] stretchableImageWithLeftCapWidth:100 topCapHeight:100];
     blackArea.hidden=YES;
     blackArea.userInteractionEnabled=YES;
     UITextView *tv = [[[UITextView alloc] initWithFrame:CGRectMake(10, 10, blackArea.bounds.size.width-20, 95)]autorelease];

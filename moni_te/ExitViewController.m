@@ -61,19 +61,19 @@
         [eav renderImage];
         [self.contentView addSubview:eav];
     }else{
-        self.backImageView.image=[UIImage imageNamed:@"FlashBackImage"];
+        self.backImageView.image=[UIImage imageNamed:@"app_back"];
         UIButton *btn=[[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 95, 95)]autorelease];
-        [btn setImage:[UIImage imageNamed:@"buttonen"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"lang_setting_button"] forState:UIControlStateNormal];
         btn.center=CGPointMake(self.contentView.bounds.size.width/2, self.contentView.bounds.size.height/2-15-47);
         [self.contentView addSubview:btn];
         btn.tag=2;
         [btn addTarget:self action:@selector(change_lang:) forControlEvents:UIControlEventTouchUpInside];
-        btn=[[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 95, 95)]autorelease];
-        [btn setImage:[UIImage imageNamed:@"buttoncn"] forState:UIControlStateNormal];
-        btn.center=CGPointMake(self.contentView.bounds.size.width/2, self.contentView.bounds.size.height/2+15+47);
-        [self.contentView addSubview:btn];
-        btn.tag=1;
-        [btn addTarget:self action:@selector(change_lang:) forControlEvents:UIControlEventTouchUpInside];
+//        btn=[[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 95, 95)]autorelease];
+//        [btn setImage:[UIImage imageNamed:@"buttoncn"] forState:UIControlStateNormal];
+//        btn.center=CGPointMake(self.contentView.bounds.size.width/2, self.contentView.bounds.size.height/2+15+47);
+//        [self.contentView addSubview:btn];
+//        btn.tag=1;
+//        [btn addTarget:self action:@selector(change_lang:) forControlEvents:UIControlEventTouchUpInside];
     }
     
 }

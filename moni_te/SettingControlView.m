@@ -19,16 +19,16 @@
     if (self) {
         // Initialization code
         
-        self.commonImageName=@"settingcontrol";
+        self.commonImageName=@"settings_control_back";
         
-        UIBaseButton *btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(20, 60, 100, 21)]autorelease];
-        btn.offImageName=@"readsetting_off";
-        btn.onImageName=@"readsetting_on";
+        UIBaseButton *btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(20, 50, 100, 30)]autorelease];
+        btn.offImageName=@"settings_control_read_w";
+        btn.onImageName=@"settings_control_read_o";
         [self addSubview:btn];
         read=btn;
-        btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(180+screenWidth-320, 60, 100, 21)]autorelease];
-        btn.offImageName=@"sendsetting_off";
-        btn.onImageName=@"sendsetting_on";
+        btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(160+screenWidth-320, 50, 100, 30)]autorelease];
+        btn.offImageName=@"settings_control_send_w";
+        btn.onImageName=@"settings_control_send_o";
         [self addSubview:btn];
         set=btn;
         

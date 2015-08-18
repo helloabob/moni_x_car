@@ -198,7 +198,7 @@
 }
 - (id)initWithFrame:(CGRect)frame withImageName:(NSString *)imageName withDelegate:(id)delegate
 {
-    frame.size.height = 30;
+    frame.size.height = 25;
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -225,9 +225,9 @@
         imageView.image=[UIImage imageNamed:@"p_r"];
         [self addSubview:imageView];
         
-        titleImageView=[[[UIImageView alloc]initWithFrame:CGRectMake(15, 5, 120, frame.size.height-10)]autorelease];
+        titleImageView=[[[UIImageView alloc]initWithFrame:CGRectMake(45, 7, 60, frame.size.height-15)]autorelease];
         titleImageView.backgroundColor = [UIColor clearColor];
-        titleImageView.contentMode=UIViewContentModeCenter;
+//        titleImageView.contentMode=UIViewContentModeCenter;
         [self addSubview:titleImageView];
         
         UIView *innerView=[[[UIView alloc]initWithFrame:CGRectMake(rect.origin.x+5, 0, rect.size.width-10, rect.size.height)]autorelease];

@@ -44,13 +44,6 @@
 		2D26E265194C7C790039D5D8 /* turboklvl_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D26E261194C7C790039D5D8 /* turboklvl_2.png */; };
 		2D26E266194C7C790039D5D8 /* turbotlvl_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D26E262194C7C790039D5D8 /* turbotlvl_1.png */; };
 		2D26E267194C7C790039D5D8 /* turbotlvl_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D26E263194C7C790039D5D8 /* turbotlvl_2.png */; };
-		2D2F68711B80FDF9002DD8BB /* app_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F686A1B80FDF9002DD8BB /* app_back.png */; };
-		2D2F68721B80FDF9002DD8BB /* language_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F686B1B80FDF9002DD8BB /* language_button.png */; };
-		2D2F68731B80FDF9002DD8BB /* middle_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F686C1B80FDF9002DD8BB /* middle_line.png */; };
-		2D2F68741B80FDFA002DD8BB /* settings_control_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F686D1B80FDF9002DD8BB /* settings_control_back.png */; };
-		2D2F68751B80FDFA002DD8BB /* settings_control_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F686E1B80FDF9002DD8BB /* settings_control_button.png */; };
-		2D2F68761B80FDFA002DD8BB /* tooltip_area.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F686F1B80FDF9002DD8BB /* tooltip_area.png */; };
-		2D2F68771B80FDFA002DD8BB /* top_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F68701B80FDF9002DD8BB /* top_line.png */; };
 		2D7F2A511937714B00E004AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7F2A501937714B00E004AE /* Foundation.framework */; };
 		2D7F2A531937714B00E004AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7F2A521937714B00E004AE /* CoreGraphics.framework */; };
 		2D7F2A551937714B00E004AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7F2A541937714B00E004AE /* UIKit.framework */; };
@@ -198,6 +191,23 @@
 		2DE22A5B193B09AD00DC39DC /* connectfailalert_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE22A51193B09AD00DC39DC /* connectfailalert_1.png */; };
 		2DE22A5C193B09AD00DC39DC /* connectfailalert_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE22A52193B09AD00DC39DC /* connectfailalert_2.png */; };
 		2DE22A5F193B654B00DC39DC /* ExitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE22A5E193B654B00DC39DC /* ExitViewController.m */; };
+		2DE3B50C1B839115002A96A0 /* app_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B4FB1B839115002A96A0 /* app_back.png */; };
+		2DE3B50D1B839115002A96A0 /* exit_button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B4FC1B839115002A96A0 /* exit_button_2.png */; };
+		2DE3B50E1B839115002A96A0 /* exit_button_o_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B4FD1B839115002A96A0 /* exit_button_o_2.png */; };
+		2DE3B50F1B839115002A96A0 /* exit_button_w_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B4FE1B839115002A96A0 /* exit_button_w_2.png */; };
+		2DE3B5101B839115002A96A0 /* lang_setting_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B4FF1B839115002A96A0 /* lang_setting_button.png */; };
+		2DE3B5111B839115002A96A0 /* language_button_o.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5001B839115002A96A0 /* language_button_o.png */; };
+		2DE3B5121B839115002A96A0 /* language_button_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5011B839115002A96A0 /* language_button_w.png */; };
+		2DE3B5131B839115002A96A0 /* language_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5021B839115002A96A0 /* language_button.png */; };
+		2DE3B5141B839115002A96A0 /* middle_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5031B839115002A96A0 /* middle_line.png */; };
+		2DE3B5151B839115002A96A0 /* settings_control_back_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5041B839115002A96A0 /* settings_control_back_2.png */; };
+		2DE3B5161B839115002A96A0 /* settings_control_button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5051B839115002A96A0 /* settings_control_button_2.png */; };
+		2DE3B5171B839115002A96A0 /* settings_control_read_o_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5061B839115002A96A0 /* settings_control_read_o_2.png */; };
+		2DE3B5181B839115002A96A0 /* settings_control_read_w_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5071B839115002A96A0 /* settings_control_read_w_2.png */; };
+		2DE3B5191B839115002A96A0 /* settings_control_send_o_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5081B839115002A96A0 /* settings_control_send_o_2.png */; };
+		2DE3B51A1B839115002A96A0 /* settings_control_send_w_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B5091B839115002A96A0 /* settings_control_send_w_2.png */; };
+		2DE3B51B1B839115002A96A0 /* tooltip_area.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B50A1B839115002A96A0 /* tooltip_area.png */; };
+		2DE3B51C1B839115002A96A0 /* top_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE3B50B1B839115002A96A0 /* top_line.png */; };
 		2DEF526C194342FF00D4C9B5 /* UITabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF526B194342FF00D4C9B5 /* UITabView.m */; };
 		2DEF526F19435B3400D4C9B5 /* GECKOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF526E19435B3400D4C9B5 /* GECKOViewController.m */; };
 		2DEF5271194366B800D4C9B5 /* gecko.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF5270194366B800D4C9B5 /* gecko.plist */; };
@@ -309,13 +319,6 @@
 		2D26E261194C7C790039D5D8 /* turboklvl_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turboklvl_2.png; sourceTree = "<group>"; };
 		2D26E262194C7C790039D5D8 /* turbotlvl_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbotlvl_1.png; sourceTree = "<group>"; };
 		2D26E263194C7C790039D5D8 /* turbotlvl_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbotlvl_2.png; sourceTree = "<group>"; };
-		2D2F686A1B80FDF9002DD8BB /* app_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_back.png; sourceTree = "<group>"; };
-		2D2F686B1B80FDF9002DD8BB /* language_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = language_button.png; sourceTree = "<group>"; };
-		2D2F686C1B80FDF9002DD8BB /* middle_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middle_line.png; sourceTree = "<group>"; };
-		2D2F686D1B80FDF9002DD8BB /* settings_control_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_back.png; sourceTree = "<group>"; };
-		2D2F686E1B80FDF9002DD8BB /* settings_control_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_button.png; sourceTree = "<group>"; };
-		2D2F686F1B80FDF9002DD8BB /* tooltip_area.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tooltip_area.png; sourceTree = "<group>"; };
-		2D2F68701B80FDF9002DD8BB /* top_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_line.png; sourceTree = "<group>"; };
 		2D7F2A4D1937714B00E004AE /* moni_te.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moni_te.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7F2A501937714B00E004AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D7F2A521937714B00E004AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -476,6 +479,23 @@
 		2DE22A52193B09AD00DC39DC /* connectfailalert_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectfailalert_2.png; sourceTree = "<group>"; };
 		2DE22A5D193B654B00DC39DC /* ExitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExitViewController.h; sourceTree = "<group>"; };
 		2DE22A5E193B654B00DC39DC /* ExitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitViewController.m; sourceTree = "<group>"; };
+		2DE3B4FB1B839115002A96A0 /* app_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_back.png; sourceTree = "<group>"; };
+		2DE3B4FC1B839115002A96A0 /* exit_button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit_button_2.png; sourceTree = "<group>"; };
+		2DE3B4FD1B839115002A96A0 /* exit_button_o_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit_button_o_2.png; sourceTree = "<group>"; };
+		2DE3B4FE1B839115002A96A0 /* exit_button_w_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit_button_w_2.png; sourceTree = "<group>"; };
+		2DE3B4FF1B839115002A96A0 /* lang_setting_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lang_setting_button.png; sourceTree = "<group>"; };
+		2DE3B5001B839115002A96A0 /* language_button_o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = language_button_o.png; sourceTree = "<group>"; };
+		2DE3B5011B839115002A96A0 /* language_button_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = language_button_w.png; sourceTree = "<group>"; };
+		2DE3B5021B839115002A96A0 /* language_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = language_button.png; sourceTree = "<group>"; };
+		2DE3B5031B839115002A96A0 /* middle_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middle_line.png; sourceTree = "<group>"; };
+		2DE3B5041B839115002A96A0 /* settings_control_back_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_back_2.png; sourceTree = "<group>"; };
+		2DE3B5051B839115002A96A0 /* settings_control_button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_button_2.png; sourceTree = "<group>"; };
+		2DE3B5061B839115002A96A0 /* settings_control_read_o_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_read_o_2.png; sourceTree = "<group>"; };
+		2DE3B5071B839115002A96A0 /* settings_control_read_w_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_read_w_2.png; sourceTree = "<group>"; };
+		2DE3B5081B839115002A96A0 /* settings_control_send_o_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_send_o_2.png; sourceTree = "<group>"; };
+		2DE3B5091B839115002A96A0 /* settings_control_send_w_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_control_send_w_2.png; sourceTree = "<group>"; };
+		2DE3B50A1B839115002A96A0 /* tooltip_area.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tooltip_area.png; sourceTree = "<group>"; };
+		2DE3B50B1B839115002A96A0 /* top_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_line.png; sourceTree = "<group>"; };
 		2DEF526A194342FF00D4C9B5 /* UITabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabView.h; sourceTree = "<group>"; };
 		2DEF526B194342FF00D4C9B5 /* UITabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabView.m; sourceTree = "<group>"; };
 		2DEF526D19435B3400D4C9B5 /* GECKOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GECKOViewController.h; sourceTree = "<group>"; };
@@ -632,13 +652,23 @@
 		2D2F68691B80FDF9002DD8BB /* component */ = {
 			isa = PBXGroup;
 			children = (
-				2D2F686A1B80FDF9002DD8BB /* app_back.png */,
-				2D2F686B1B80FDF9002DD8BB /* language_button.png */,
-				2D2F686C1B80FDF9002DD8BB /* middle_line.png */,
-				2D2F686D1B80FDF9002DD8BB /* settings_control_back.png */,
-				2D2F686E1B80FDF9002DD8BB /* settings_control_button.png */,
-				2D2F686F1B80FDF9002DD8BB /* tooltip_area.png */,
-				2D2F68701B80FDF9002DD8BB /* top_line.png */,
+				2DE3B4FB1B839115002A96A0 /* app_back.png */,
+				2DE3B4FC1B839115002A96A0 /* exit_button_2.png */,
+				2DE3B4FD1B839115002A96A0 /* exit_button_o_2.png */,
+				2DE3B4FE1B839115002A96A0 /* exit_button_w_2.png */,
+				2DE3B4FF1B839115002A96A0 /* lang_setting_button.png */,
+				2DE3B5001B839115002A96A0 /* language_button_o.png */,
+				2DE3B5011B839115002A96A0 /* language_button_w.png */,
+				2DE3B5021B839115002A96A0 /* language_button.png */,
+				2DE3B5031B839115002A96A0 /* middle_line.png */,
+				2DE3B5041B839115002A96A0 /* settings_control_back_2.png */,
+				2DE3B5051B839115002A96A0 /* settings_control_button_2.png */,
+				2DE3B5061B839115002A96A0 /* settings_control_read_o_2.png */,
+				2DE3B5071B839115002A96A0 /* settings_control_read_w_2.png */,
+				2DE3B5081B839115002A96A0 /* settings_control_send_o_2.png */,
+				2DE3B5091B839115002A96A0 /* settings_control_send_w_2.png */,
+				2DE3B50A1B839115002A96A0 /* tooltip_area.png */,
+				2DE3B50B1B839115002A96A0 /* top_line.png */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -1103,8 +1133,6 @@
 				2DA9B8551947463800A2E574 /* voltagecutoff_1.png in Resources */,
 				2D8568B41940C1EB0048F43B /* firmware_on_1.png in Resources */,
 				2DA9B83E1947463800A2E574 /* runmode_2.png in Resources */,
-				2D2F68771B80FDFA002DD8BB /* top_line.png in Resources */,
-				2D2F68741B80FDFA002DD8BB /* settings_control_back.png in Resources */,
 				2D174265193C046500FA81D4 /* buttonneg_on_1.png in Resources */,
 				2D7F2A691937714B00E004AE /* Images.xcassets in Resources */,
 				2D11543D193ABEA00073D1AB /* readsetting_on_1.png in Resources */,
@@ -1128,15 +1156,19 @@
 				2D8568B91940C1EB0048F43B /* general_on_2.png in Resources */,
 				2DA9B83C1947463800A2E574 /* punchrate2_2.png in Resources */,
 				2DA251F3193F5BEF001D87A6 /* cov_1.png in Resources */,
+				2DE3B5131B839115002A96A0 /* language_button.png in Resources */,
 				5ABBAB38193EA9BD00F3CBFA /* paramicon.png in Resources */,
 				2DE22A53193B09AD00DC39DC /* buttonquit_off_1.png in Resources */,
 				5AA76DD71946C9C800572D74 /* data_off_2.png in Resources */,
 				2D11543C193ABEA00073D1AB /* readsetting_off_2.png in Resources */,
 				2DEF528E1944325700D4C9B5 /* battery_2.png in Resources */,
 				2DA9B83B1947463800A2E574 /* punchrate2_1.png in Resources */,
+				2DE3B5171B839115002A96A0 /* settings_control_read_o_2.png in Resources */,
 				2DA2520F193F6442001D87A6 /* btn_020.press@2x.png in Resources */,
 				2D174270193C423500FA81D4 /* buttonen.png in Resources */,
+				2DE3B50D1B839115002A96A0 /* exit_button_2.png in Resources */,
 				2D174267193C046500FA81D4 /* buttonpos_off_1.png in Resources */,
+				2DE3B50E1B839115002A96A0 /* exit_button_o_2.png in Resources */,
 				2DA9B83F1947463800A2E574 /* slope_1.png in Resources */,
 				2DA9B81D1947463800A2E574 /* becout_1.png in Resources */,
 				2DA2520E193F6442001D87A6 /* btn_020.disable@2x.png in Resources */,
@@ -1162,6 +1194,7 @@
 				5AA76DDD1946C9C800572D74 /* throttle_on_2.png in Resources */,
 				2DA9B8201947463800A2E574 /* boosttiming_2.png in Resources */,
 				2D8568B11940C1EB0048F43B /* default_on_2.png in Resources */,
+				2DE3B51B1B839115002A96A0 /* tooltip_area.png in Resources */,
 				2DA25200193F5BEF001D87A6 /* pdb_2.png in Resources */,
 				2DA9B8251947463800A2E574 /* brakerate2_1.png in Resources */,
 				2DA8A7F3193A2407002E68D9 /* SEAL.png in Resources */,
@@ -1188,10 +1221,9 @@
 				2D115452193AC3D80073D1AB /* toolbarlanguage_off.png in Resources */,
 				2DEF52941944325700D4C9B5 /* gm_2.png in Resources */,
 				5AA76DE11946C9C800572D74 /* turbo_on_2.png in Resources */,
-				2D2F68711B80FDF9002DD8BB /* app_back.png in Resources */,
+				2DE3B50C1B839115002A96A0 /* app_back.png in Resources */,
 				2DA9B8291947463800A2E574 /* dragbrake_1.png in Resources */,
 				2DEF527D19442C6300D4C9B5 /* software_1.png in Resources */,
-				2D2F68761B80FDFA002DD8BB /* tooltip_area.png in Resources */,
 				2DA9B8341947463800A2E574 /* motmaxrpm_2.png in Resources */,
 				2D8568B21940C1EB0048F43B /* firmware_off_1.png in Resources */,
 				2DE22A56193B09AD00DC39DC /* buttonquit_on_2.png in Resources */,
@@ -1200,27 +1232,33 @@
 				5A0A8A7C1B7B1AC6006C951E /* p_r.png in Resources */,
 				5AA76DDE1946C9C800572D74 /* turbo_off_1.png in Resources */,
 				2DA251F6193F5BEF001D87A6 /* ic_2.png in Resources */,
+				2DE3B5121B839115002A96A0 /* language_button_w.png in Resources */,
 				5A0A8A7B1B7B1AC6006C951E /* p_l.png in Resources */,
 				2DA9B8531947463800A2E574 /* turbotiming_1.png in Resources */,
+				2DE3B5161B839115002A96A0 /* settings_control_button_2.png in Resources */,
 				2DA25210193F6442001D87A6 /* btn_020@2x.png in Resources */,
 				2DA9B8351947463800A2E574 /* motmaxtemp_1.png in Resources */,
+				2DE3B51A1B839115002A96A0 /* settings_control_send_w_2.png in Resources */,
 				2DA9B83A1947463800A2E574 /* punchrate1_2.png in Resources */,
 				2DE22A5A193B09AD00DC39DC /* buttonyes_on_2.png in Resources */,
 				2D115442193ABEA00073D1AB /* sendsetting_on_2.png in Resources */,
-				2D2F68721B80FDF9002DD8BB /* language_button.png in Resources */,
+				2DE3B5111B839115002A96A0 /* language_button_o.png in Resources */,
 				2DA251F5193F5BEF001D87A6 /* ic_1.png in Resources */,
 				5AA76DD91946C9C800572D74 /* data_on_2.png in Resources */,
 				2DA8A7F1193A2407002E68D9 /* BEAST.png in Resources */,
 				2D8568B61940C1EB0048F43B /* general_off_1.png in Resources */,
 				2DEF528D1944325700D4C9B5 /* battery_1.png in Resources */,
 				2DA9B8461947463800A2E574 /* switchpoint1_2.png in Resources */,
+				2DE3B5181B839115002A96A0 /* settings_control_read_w_2.png in Resources */,
 				2D115440193ABEA00073D1AB /* sendsetting_off_2.png in Resources */,
+				2DE3B5151B839115002A96A0 /* settings_control_back_2.png in Resources */,
 				2DEF52911944325700D4C9B5 /* covt_1.png in Resources */,
+				2DE3B51C1B839115002A96A0 /* top_line.png in Resources */,
 				2DA251FB193F5BEF001D87A6 /* nr_1.png in Resources */,
-				2D2F68731B80FDF9002DD8BB /* middle_line.png in Resources */,
 				2DE22A48193B049300DC39DC /* Default@2x.png in Resources */,
 				2DA251F8193F5BEF001D87A6 /* mr_2.png in Resources */,
 				2DEF52901944325700D4C9B5 /* brake_2.png in Resources */,
+				2DE3B5191B839115002A96A0 /* settings_control_send_o_2.png in Resources */,
 				5AA76DCE1946C9C800572D74 /* boost_off_1.png in Resources */,
 				2DE22A57193B09AD00DC39DC /* buttonyes_off_1.png in Resources */,
 				2DA25202193F5BEF001D87A6 /* tl_2.png in Resources */,
@@ -1243,6 +1281,8 @@
 				2DA25201193F5BEF001D87A6 /* tl_1.png in Resources */,
 				5AA76DD21946C9C800572D74 /* brake_off_1.png in Resources */,
 				2DA9B8301947463800A2E574 /* escmaxtemp_2.png in Resources */,
+				2DE3B5101B839115002A96A0 /* lang_setting_button.png in Resources */,
+				2DE3B5141B839115002A96A0 /* middle_line.png in Resources */,
 				2DA9B84A1947463800A2E574 /* thcurve_2.png in Resources */,
 				2DA9B8211947463800A2E574 /* brakecurve_1.png in Resources */,
 				2DA9B8191947463800A2E574 /* activationmethod_1.png in Resources */,
@@ -1290,11 +1330,11 @@
 				2DA9B84C1947463800A2E574 /* threversespd_2.png in Resources */,
 				5AA76DDC1946C9C800572D74 /* throttle_on_1.png in Resources */,
 				2DA9B84E1947463800A2E574 /* turbodelay_2.png in Resources */,
-				2D2F68751B80FDFA002DD8BB /* settings_control_button.png in Resources */,
 				2D115450193AC3D80073D1AB /* toolbarexit_on_1.png in Resources */,
 				2D174266193C046500FA81D4 /* buttonneg_on_2.png in Resources */,
 				2D8568BA1940C1EB0048F43B /* header_off.png in Resources */,
 				2DA9B8321947463800A2E574 /* initialbrake_2.png in Resources */,
+				2DE3B50F1B839115002A96A0 /* exit_button_w_2.png in Resources */,
 				5AA76DCF1946C9C800572D74 /* boost_off_2.png in Resources */,
 				5AAFEF4F19F7562600C31957 /* 1024.png in Resources */,
 				2D174263193C046500FA81D4 /* buttonneg_off_1.png in Resources */,

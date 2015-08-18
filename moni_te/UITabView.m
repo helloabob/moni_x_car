@@ -75,25 +75,36 @@
         menuArray=[[NSArray alloc]initWithObjects:@"firmware",@"general",@"throttle",@"brake",@"boost",@"turbo",@"data",@"default", nil];
     }
     
-    tabMenuBar=[[[UIView alloc]initWithFrame:CGRectMake(0, 0, 40*numberOfTabs, 38)]autorelease];
+//    tabMenuBar=[[[UIView alloc]initWithFrame:CGRectMake(0, 0, 40*numberOfTabs, 38)]autorelease];
+//    [self addSubview:tabMenuBar];
+    
+    /**/
+    tabMenuBar = [[[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, 60)]autorelease];
+    int itemWidth = screenWidth / 4;
+    if (numberOfTabs==3) {
+        UIImageView *igv = [[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"top_line"]] autorelease];
+        igv.frame = CGRectMake(0, 0, screenWidth, 36);
+        [tabMenuBar addSubview:igv];
+    }
     [self addSubview:tabMenuBar];
     
     for (int i=0; i<numberOfTabs; i++) {
-        UIBaseButton *btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(i*40, 0, 39, 38)]autorelease];
+        UIBaseButton *btn=[[[UIBaseButton alloc]initWithFrame:CGRectMake(i%4*itemWidth+(numberOfTabs==3?itemWidth/2:0), numberOfTabs==3?0:(i/4*30), itemWidth, 29)]autorelease];
         btn.offImageName=[NSString stringWithFormat:@"%@_off",menuArray[i]];
         btn.onImageName=[NSString stringWithFormat:@"%@_on",menuArray[i]];
         btn.offBackImageName=@"header_off";
         btn.onBackImageName=@"header_on";
+        [btn setImageEdgeInsets:UIEdgeInsetsMake(15, 5, 2, 5)];
         btn.imageView.contentMode=UIViewContentModeScaleAspectFit;
         btn.imageEdgeInsets=UIEdgeInsetsMake(2, 4, 4, 4);
         btn.tag=2000+i;
         [btn addTarget:self action:@selector(tabClicked:) forControlEvents:UIControlEventTouchUpInside];
         [tabMenuBar addSubview:btn];
-        if (i<numberOfTabs-1) {
-            UIImageView *split=[[[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(btn.frame), 0, 1, 38)]autorelease];
-            split.image=[UIImage imageNamed:@"header_split"];
-            [tabMenuBar addSubview:split];
-        }
+//        if (i<numberOfTabs-1) {
+//            UIImageView *split=[[[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(btn.frame), 0, 1, 38)]autorelease];
+//            split.image=[UIImage imageNamed:@"header_split"];
+//            [tabMenuBar addSubview:split];
+//        }
         
         
         UIView *view=[[[UIView alloc]initWithFrame:panel.bounds]autorelease];

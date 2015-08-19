@@ -68,6 +68,15 @@
         [self.contentView addSubview:btn];
         btn.tag=2;
         [btn addTarget:self action:@selector(change_lang:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UILabel *lbl = [[[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(btn.frame)+5, screenWidth, 50)] autorelease];
+        lbl.text = @"English";
+        lbl.font = [UIFont boldSystemFontOfSize:20];
+        lbl.textColor = [UIColor whiteColor];
+        lbl.backgroundColor = [UIColor clearColor];
+        lbl.textAlignment = NSTextAlignmentCenter;
+        [self.contentView addSubview:lbl];
+        
 //        btn=[[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 95, 95)]autorelease];
 //        [btn setImage:[UIImage imageNamed:@"buttoncn"] forState:UIControlStateNormal];
 //        btn.center=CGPointMake(self.contentView.bounds.size.width/2, self.contentView.bounds.size.height/2+15+47);

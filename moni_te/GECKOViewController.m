@@ -11,6 +11,7 @@
 #import "TSLocateView.h"
 
 #import "ParamButtonView2.h"
+#import "ParamButtonView3.h"
 
 
 static int g_tag;
@@ -82,15 +83,15 @@ static unsigned char result[9];
     
     /*tab 1*/
     UIView *view=[tabView viewForIndex:0];
-    ParamButtonView *pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 50, self.pbvWidth, 65) withImageName:@"device" withDelegate:self]autorelease];
+    ParamButtonView3 *pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 50, self.pbvWidth, 65) withImageName:@"gec_device_item" withDelegate:self]autorelease];
     pbv1.tag=500;
     [view addSubview:pbv1];
     pbv1.valueString=@"GECKO PLANE";
-    pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 120, self.pbvWidth, 65) withImageName:@"hardware" withDelegate:self]autorelease];
+    pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 120, self.pbvWidth, 65) withImageName:@"gec_hardware_item" withDelegate:self]autorelease];
     pbv1.tag=501;
     [view addSubview:pbv1];
     pbv1.valueString=@"ZTW GECKO";
-    pbv1=[[[ParamButtonView alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 190, self.pbvWidth, 65) withImageName:@"software" withDelegate:self]autorelease];
+    pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 190, self.pbvWidth, 65) withImageName:@"gec_software_item" withDelegate:self]autorelease];
     pbv1.tag=502;
     [view addSubview:pbv1];
     pbv1.valueString=@"V1.01";

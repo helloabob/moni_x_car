@@ -37,8 +37,8 @@
         threadshold=2;
         port2=8008;
 //        self.host2=@"192.168.1.11";
-        self.host2=@"192.168.0.105";
-//        self.host2=@"131.252.85.70";
+//        self.host2=@"192.168.0.105";
+        self.host2=@"131.252.85.70";
         inProgress = NO;
     }
     

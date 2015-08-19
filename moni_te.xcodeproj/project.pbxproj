@@ -265,6 +265,13 @@
 		5ABBAB39193EA9BD00F3CBFA /* runningmode_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ABBAB36193EA9BD00F3CBFA /* runningmode_1.png */; };
 		5ABBAB3A193EA9BD00F3CBFA /* runningmode_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ABBAB37193EA9BD00F3CBFA /* runningmode_2.png */; };
 		5ABBAB3D193EB4DA00F3CBFA /* ParamButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABBAB3C193EB4DA00F3CBFA /* ParamButtonView.m */; };
+		5ACF8E581B847B4E00C5DDFE /* turbo_device_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACF8E571B847B4E00C5DDFE /* turbo_device_item.png */; };
+		5ACF8E5B1B847BB500C5DDFE /* ParamButtonView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF8E5A1B847BB500C5DDFE /* ParamButtonView3.m */; };
+		5ACF8E5E1B847CFD00C5DDFE /* turbo_hardware_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACF8E5C1B847CFD00C5DDFE /* turbo_hardware_item.png */; };
+		5ACF8E5F1B847CFD00C5DDFE /* turbo_software_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACF8E5D1B847CFD00C5DDFE /* turbo_software_item.png */; };
+		5ACF8E631B84823C00C5DDFE /* gec_device_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACF8E601B84823C00C5DDFE /* gec_device_item.png */; };
+		5ACF8E641B84823C00C5DDFE /* gec_hardware_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACF8E611B84823C00C5DDFE /* gec_hardware_item.png */; };
+		5ACF8E651B84823C00C5DDFE /* gec_software_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACF8E621B84823C00C5DDFE /* gec_software_item.png */; };
 		5AF1601E1948533F00324152 /* turbo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AF1601D1948533F00324152 /* turbo.plist */; };
 		5AF18C77194FDF1500072FA3 /* TPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF18C76194FDF1500072FA3 /* TPViewController.m */; };
 /* End PBXBuildFile section */
@@ -561,6 +568,14 @@
 		5ABBAB37193EA9BD00F3CBFA /* runningmode_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = runningmode_2.png; sourceTree = "<group>"; };
 		5ABBAB3B193EB4DA00F3CBFA /* ParamButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamButtonView.h; sourceTree = "<group>"; };
 		5ABBAB3C193EB4DA00F3CBFA /* ParamButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamButtonView.m; sourceTree = "<group>"; };
+		5ACF8E571B847B4E00C5DDFE /* turbo_device_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbo_device_item.png; sourceTree = "<group>"; };
+		5ACF8E591B847BB500C5DDFE /* ParamButtonView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamButtonView3.h; sourceTree = "<group>"; };
+		5ACF8E5A1B847BB500C5DDFE /* ParamButtonView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamButtonView3.m; sourceTree = "<group>"; };
+		5ACF8E5C1B847CFD00C5DDFE /* turbo_hardware_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbo_hardware_item.png; sourceTree = "<group>"; };
+		5ACF8E5D1B847CFD00C5DDFE /* turbo_software_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbo_software_item.png; sourceTree = "<group>"; };
+		5ACF8E601B84823C00C5DDFE /* gec_device_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gec_device_item.png; sourceTree = "<group>"; };
+		5ACF8E611B84823C00C5DDFE /* gec_hardware_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gec_hardware_item.png; sourceTree = "<group>"; };
+		5ACF8E621B84823C00C5DDFE /* gec_software_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gec_software_item.png; sourceTree = "<group>"; };
 		5AF1601D1948533F00324152 /* turbo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = turbo.plist; sourceTree = "<group>"; };
 		5AF18C75194FDF1500072FA3 /* TPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPViewController.h; sourceTree = "<group>"; };
 		5AF18C76194FDF1500072FA3 /* TPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPViewController.m; sourceTree = "<group>"; };
@@ -706,6 +721,8 @@
 		2D7F2A561937714B00E004AE /* moni_te */ = {
 			isa = PBXGroup;
 			children = (
+				5ACF8E591B847BB500C5DDFE /* ParamButtonView3.h */,
+				5ACF8E5A1B847BB500C5DDFE /* ParamButtonView3.m */,
 				5A0A8A721B7AED6B006C951E /* ParamButtonView2.h */,
 				5A0A8A731B7AED6B006C951E /* ParamButtonView2.m */,
 				5A7E8FE71991EBE60030A496 /* MBProgressHUD.h */,
@@ -1005,6 +1022,7 @@
 		5A0A8A771B7B1AC6006C951E /* v2 */ = {
 			isa = PBXGroup;
 			children = (
+				5ACF8E561B847B4E00C5DDFE /* parambutton */,
 				2D2F68691B80FDF9002DD8BB /* component */,
 				5A0A8A781B7B1AC6006C951E /* common */,
 			);
@@ -1046,6 +1064,19 @@
 				5ABBAB37193EA9BD00F3CBFA /* runningmode_2.png */,
 			);
 			path = beast;
+			sourceTree = "<group>";
+		};
+		5ACF8E561B847B4E00C5DDFE /* parambutton */ = {
+			isa = PBXGroup;
+			children = (
+				5ACF8E601B84823C00C5DDFE /* gec_device_item.png */,
+				5ACF8E611B84823C00C5DDFE /* gec_hardware_item.png */,
+				5ACF8E621B84823C00C5DDFE /* gec_software_item.png */,
+				5ACF8E5C1B847CFD00C5DDFE /* turbo_hardware_item.png */,
+				5ACF8E5D1B847CFD00C5DDFE /* turbo_software_item.png */,
+				5ACF8E571B847B4E00C5DDFE /* turbo_device_item.png */,
+			);
+			path = parambutton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1183,6 +1214,7 @@
 				5AA76DDF1946C9C800572D74 /* turbo_off_2.png in Resources */,
 				2DA25203193F5BEF001D87A6 /* tpr_1.png in Resources */,
 				2DA25213193F6442001D87A6 /* btn_021@2x.png in Resources */,
+				5ACF8E581B847B4E00C5DDFE /* turbo_device_item.png in Resources */,
 				2D11544E193AC3D80073D1AB /* toolbarexit_off_1.png in Resources */,
 				2D174268193C046500FA81D4 /* buttonpos_off_2.png in Resources */,
 				2DEF527C19442C6300D4C9B5 /* hardware_2.png in Resources */,
@@ -1196,6 +1228,7 @@
 				2D8568B11940C1EB0048F43B /* default_on_2.png in Resources */,
 				2DE3B51B1B839115002A96A0 /* tooltip_area.png in Resources */,
 				2DA25200193F5BEF001D87A6 /* pdb_2.png in Resources */,
+				5ACF8E5E1B847CFD00C5DDFE /* turbo_hardware_item.png in Resources */,
 				2DA9B8251947463800A2E574 /* brakerate2_1.png in Resources */,
 				2DA8A7F3193A2407002E68D9 /* SEAL.png in Resources */,
 				2DA9B8361947463800A2E574 /* motmaxtemp_2.png in Resources */,
@@ -1280,6 +1313,7 @@
 				2D11543F193ABEA00073D1AB /* sendsetting_off_1.png in Resources */,
 				2DA25201193F5BEF001D87A6 /* tl_1.png in Resources */,
 				5AA76DD21946C9C800572D74 /* brake_off_1.png in Resources */,
+				5ACF8E5F1B847CFD00C5DDFE /* turbo_software_item.png in Resources */,
 				2DA9B8301947463800A2E574 /* escmaxtemp_2.png in Resources */,
 				2DE3B5101B839115002A96A0 /* lang_setting_button.png in Resources */,
 				2DE3B5141B839115002A96A0 /* middle_line.png in Resources */,
@@ -1316,6 +1350,7 @@
 				2DEF528F1944325700D4C9B5 /* brake_1.png in Resources */,
 				2D8568B31940C1EB0048F43B /* firmware_off_2.png in Resources */,
 				2DA9B8401947463800A2E574 /* slope_2.png in Resources */,
+				5ACF8E651B84823C00C5DDFE /* gec_software_item.png in Resources */,
 				2D8568B71940C1EB0048F43B /* general_off_2.png in Resources */,
 				2DE22A46193B049300DC39DC /* Default-568h@2x.png in Resources */,
 				2DA8A7F2193A2407002E68D9 /* GECKO.png in Resources */,
@@ -1343,6 +1378,7 @@
 				2DE22A55193B09AD00DC39DC /* buttonquit_on_1.png in Resources */,
 				2DA9B8541947463800A2E574 /* turbotiming_2.png in Resources */,
 				2DA9B84B1947463800A2E574 /* threversespd_1.png in Resources */,
+				5ACF8E631B84823C00C5DDFE /* gec_device_item.png in Resources */,
 				2DA9B82B1947463800A2E574 /* endrpm_1.png in Resources */,
 				2DEF52961944325700D4C9B5 /* lvcot_2.png in Resources */,
 				2D174264193C046500FA81D4 /* buttonneg_off_2.png in Resources */,
@@ -1351,6 +1387,7 @@
 				2D11543E193ABEA00073D1AB /* readsetting_on_2.png in Resources */,
 				2DE22A58193B09AD00DC39DC /* buttonyes_off_2.png in Resources */,
 				2D17426F193C423500FA81D4 /* buttoncn.png in Resources */,
+				5ACF8E641B84823C00C5DDFE /* gec_hardware_item.png in Resources */,
 				2DABD6EA19396DEE00F27ED3 /* Icon@2x.png in Resources */,
 				2DA25204193F5BEF001D87A6 /* tpr_2.png in Resources */,
 				2DA25211193F6442001D87A6 /* btn_021.disable@2x.png in Resources */,
@@ -1387,6 +1424,7 @@
 				5AA76DB9194696E300572D74 /* TURBOViewController.m in Sources */,
 				5A7E8FE91991EBE60030A496 /* MBProgressHUD.m in Sources */,
 				2D115426193AB40E0073D1AB /* BEASTViewController.m in Sources */,
+				5ACF8E5B1B847BB500C5DDFE /* ParamButtonView3.m in Sources */,
 				2DA8A7E5193A0F7E002E68D9 /* Global.m in Sources */,
 				2D7F2A871937734D00E004AE /* AsyncUdpSocket.m in Sources */,
 				5AF18C77194FDF1500072FA3 /* TPViewController.m in Sources */,

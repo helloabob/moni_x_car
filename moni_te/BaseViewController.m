@@ -88,7 +88,7 @@ static int old_y;
     [self.contentView addSubview:scv];
     
     /*大黑板显示内容区域*/
-    blackArea=[[[UIImageView alloc]initWithFrame:CGRectMake(10, 40, screenWidth-20, 115)] autorelease];
+    blackArea=[[[UIImageView alloc]initWithFrame:CGRectMake(10, 60, screenWidth-20, 115)] autorelease];
     blackArea.image=[[UIImage imageNamed:@"tooltip_area"] stretchableImageWithLeftCapWidth:100 topCapHeight:100];
     blackArea.hidden=YES;
     blackArea.userInteractionEnabled=YES;

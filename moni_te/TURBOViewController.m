@@ -375,7 +375,7 @@ static ParamButtonView *g_pbv;
     [view addSubview:pbv];
     pbv.valueString=@"unknown";
     
-    self.SettingControlViewHidden=NO;
+    self.SettingControlViewHidden=YES;
     self.BlackAreaHidden=NO;
     
     [self changeMode:modeIndex];

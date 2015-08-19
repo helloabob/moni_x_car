@@ -96,7 +96,7 @@
         btn.onBackImageName=@"header_on";
 //        [btn setImageEdgeInsets:UIEdgeInsetsMake(15, 5, 2, 5)];
 //        btn.imageView.contentMode=UIViewContentModeScaleAspectFit;
-        btn.imageEdgeInsets=UIEdgeInsetsMake(15, 20, 5, 20);
+        btn.imageEdgeInsets=UIEdgeInsetsMake(12, 20, 7, 20);
         btn.tag=2000+i;
         [btn addTarget:self action:@selector(tabClicked:) forControlEvents:UIControlEventTouchUpInside];
         [tabMenuBar addSubview:btn];

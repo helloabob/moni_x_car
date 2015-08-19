@@ -142,6 +142,7 @@ static unsigned char result[11];
     pbv1.valueString=@"V1.01";
     
     /*tab 2*/
+    self.offset_y = 10;
     view=[tabView viewForIndex:1];
     ParamButtonView2 *pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"runningmode" withDelegate:self]autorelease];
     pbv.tag=2;

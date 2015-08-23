@@ -44,6 +44,7 @@
 		2D26E265194C7C790039D5D8 /* turboklvl_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D26E261194C7C790039D5D8 /* turboklvl_2.png */; };
 		2D26E266194C7C790039D5D8 /* turbotlvl_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D26E262194C7C790039D5D8 /* turbotlvl_1.png */; };
 		2D26E267194C7C790039D5D8 /* turbotlvl_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D26E263194C7C790039D5D8 /* turbotlvl_2.png */; };
+		2D403E0D1B8A07EC008D7584 /* gec_device_item_v2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D403E0C1B8A07EC008D7584 /* gec_device_item_v2.png */; };
 		2D7F2A511937714B00E004AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7F2A501937714B00E004AE /* Foundation.framework */; };
 		2D7F2A531937714B00E004AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7F2A521937714B00E004AE /* CoreGraphics.framework */; };
 		2D7F2A551937714B00E004AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7F2A541937714B00E004AE /* UIKit.framework */; };
@@ -326,6 +327,7 @@
 		2D26E261194C7C790039D5D8 /* turboklvl_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turboklvl_2.png; sourceTree = "<group>"; };
 		2D26E262194C7C790039D5D8 /* turbotlvl_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbotlvl_1.png; sourceTree = "<group>"; };
 		2D26E263194C7C790039D5D8 /* turbotlvl_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbotlvl_2.png; sourceTree = "<group>"; };
+		2D403E0C1B8A07EC008D7584 /* gec_device_item_v2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gec_device_item_v2.png; sourceTree = "<group>"; };
 		2D7F2A4D1937714B00E004AE /* moni_te.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moni_te.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7F2A501937714B00E004AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D7F2A521937714B00E004AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1069,6 +1071,7 @@
 		5ACF8E561B847B4E00C5DDFE /* parambutton */ = {
 			isa = PBXGroup;
 			children = (
+				2D403E0C1B8A07EC008D7584 /* gec_device_item_v2.png */,
 				5ACF8E601B84823C00C5DDFE /* gec_device_item.png */,
 				5ACF8E611B84823C00C5DDFE /* gec_hardware_item.png */,
 				5ACF8E621B84823C00C5DDFE /* gec_software_item.png */,
@@ -1192,6 +1195,7 @@
 				2DA251F3193F5BEF001D87A6 /* cov_1.png in Resources */,
 				2DE3B5131B839115002A96A0 /* language_button.png in Resources */,
 				5ABBAB38193EA9BD00F3CBFA /* paramicon.png in Resources */,
+				2D403E0D1B8A07EC008D7584 /* gec_device_item_v2.png in Resources */,
 				2DE22A53193B09AD00DC39DC /* buttonquit_off_1.png in Resources */,
 				5AA76DD71946C9C800572D74 /* data_off_2.png in Resources */,
 				2D11543C193ABEA00073D1AB /* readsetting_off_2.png in Resources */,

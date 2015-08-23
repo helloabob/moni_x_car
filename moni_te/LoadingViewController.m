@@ -100,8 +100,8 @@
         if (cfav.superview!=nil) {
             [cfav removeFromSuperview];
         }
-        [self.contentView addSubview:logo];
-        [self performSelector:@selector(nextPage) withObject:nil afterDelay:1];
+//        [self.contentView addSubview:logo];
+        [self performSelector:@selector(nextPage) withObject:nil afterDelay:0.1];
 //        unsigned char b=0xd8;
 //        [[NetUtils sharedInstance] sendData:[NSData dataWithBytes:&b length:1] withDelegate:self];
     }else{

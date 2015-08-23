@@ -142,7 +142,11 @@ static unsigned char result[11];
     pbv1.valueString=@"V1.01";
     
     /*tab 2*/
-    self.offset_y = 10;
+    if (IsiPhone5) {
+        self.offset_y = 10;
+    } else {
+        self.offset_y = -55;
+    }
     view=[tabView viewForIndex:1];
     ParamButtonView2 *pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"runningmode" withDelegate:self]autorelease];
     pbv.tag=2;
@@ -202,6 +206,10 @@ static unsigned char result[11];
     pbv.tag=1;
     [view addSubview:pbv];
     pbv.valueString=@"3.0V/Cell";
+    
+    if (!(IsiPhone5)) {
+        view.transform = CGAffineTransformMakeScale(1, 0.8);
+    }
 }
 
 - (void)showdefault{
@@ -209,9 +217,10 @@ static unsigned char result[11];
 }
 
 -(void)returnToDefault{
-    UIView *view=self.contentView;
-    for (ParamButtonView *pbv in view.subviews) {
-        if(![pbv isKindOfClass:[ParamButtonView class]])continue;
+//    UIView *view=self.contentView;
+    UIView *view = [tabView viewForIndex:1];
+    for (ParamButtonView2 *pbv in view.subviews) {
+        if(![pbv isKindOfClass:[ParamButtonView2 class]])continue;
         NSDictionary *tmp=nil;
         tmp=self.dict[self.keyArray[pbv.tag-1]];
         NSArray *values=[Global convertStringToArray:tmp forKey:@"ValuesRange"];

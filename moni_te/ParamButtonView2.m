@@ -275,28 +275,23 @@
         CGSize textSize = [lblValue.text sizeWithFont:lblValue.font];
         
         if (textSize.width > _rect.size.width) {
-            
-//            CGRect lframe = lblValue.frame;
-            CGRect lframe = _rect;
-            lframe.size.width = textSize.width;
-            lblValue.frame = lframe;
-            
-            float offset = textSize.width - _rect.size.width;
-//            CATransition *animation = [CATransaction animation];
-//            animation.type = kCATransitionFromLeft;
-            
-            [UIView animateWithDuration:3.0
-                                  delay:0
-                                options:UIViewAnimationOptionRepeat //动画重复的主开关
-             |UIViewAnimationOptionAutoreverse //动画重复自动反向，需要和上面这个一起用
-             |UIViewAnimationOptionCurveLinear //动画的时间曲线，滚动字幕线性比较合理
-                             animations:^{
-                                 lblValue.transform = CGAffineTransformMakeTranslation(-offset, 0);
-                             }
-                             completion:^(BOOL finished) {
-                                 
-                             }
-             ];
+//            CGRect lframe = _rect;
+//            lframe.size.width = textSize.width;
+//            lblValue.frame = lframe;
+//            
+//            float offset = textSize.width - _rect.size.width;
+//            [UIView animateWithDuration:3.0
+//                                  delay:0
+//                                options:UIViewAnimationOptionRepeat //动画重复的主开关
+//             |UIViewAnimationOptionAutoreverse //动画重复自动反向，需要和上面这个一起用
+//             |UIViewAnimationOptionCurveLinear //动画的时间曲线，滚动字幕线性比较合理
+//                             animations:^{
+//                                 lblValue.transform = CGAffineTransformMakeTranslation(-offset, 0);
+//                             }
+//                             completion:^(BOOL finished) {
+//                                 
+//                             }
+//             ];
         }else{
             lblValue.textAlignment=NSTextAlignmentCenter;
         }

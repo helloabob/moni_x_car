@@ -16,9 +16,9 @@
 		<key>DefaultKey</key>
 		<string>1</string>
 		<key>ValuesRange</key>
-		<string>Forward w/o Reverse,Forward with pause then Reverse,Forward/Reverse</string>
+		<string>Forward w/o Reverse,Forward with pause then Reverse</string>
 		<key>KeysRange</key>
-		<string>0-2</string>
+		<string>0-1</string>
 	</dict>
 	<key>PercentageBraking</key>
 	<dict>

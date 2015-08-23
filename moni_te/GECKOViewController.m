@@ -83,7 +83,7 @@ static unsigned char result[9];
     
     /*tab 1*/
     UIView *view=[tabView viewForIndex:0];
-    ParamButtonView3 *pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 50, self.pbvWidth, 65) withImageName:@"gec_device_item" withDelegate:self]autorelease];
+    ParamButtonView3 *pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 50, self.pbvWidth, 65) withImageName:@"gec_device_item_v2" withDelegate:self]autorelease];
     pbv1.tag=500;
     [view addSubview:pbv1];
     pbv1.valueString=@"GECKO PLANE";
@@ -97,6 +97,11 @@ static unsigned char result[9];
     pbv1.valueString=@"V1.01";
     
     /*tab 2*/
+    if (IsiPhone5) {
+        self.offset_y = 10;
+    } else {
+        self.offset_y = -40;
+    }
     ParamButtonView2 *pbv = nil;
     view=[tabView viewForIndex:1];
     pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"brake" withDelegate:self]autorelease];
@@ -153,6 +158,10 @@ static unsigned char result[9];
     pbv.tag=1003;
     [view addSubview:pbv];
     pbv.valueString=@"Reduce Power";
+    
+    if (!(IsiPhone5)) {
+        view.transform = CGAffineTransformMakeScale(1, 0.8);
+    }
 }
 -(void)viewDidTapped:(ParamButtonView2 *)sender{
     if (sender.tag<1000) {
@@ -234,7 +243,7 @@ static unsigned char result[9];
 }
 -(void)returnToDefault{
     UIView *view=[tabView viewForIndex:1];
-    for (ParamButtonView *pbv in view.subviews) {
+    for (ParamButtonView2 *pbv in view.subviews) {
         NSDictionary *tmp=nil;
         tmp=self.dict[self.keyArray[pbv.tag-1000]];
         NSArray *values=[Global convertStringToArray:tmp forKey:@"ValuesRange"];

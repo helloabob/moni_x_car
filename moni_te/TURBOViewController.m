@@ -113,13 +113,13 @@ static ParamButtonView *g_pbv;
     pbv1.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
     [view addSubview:pbv1];
     pbv1.valueString=@"CAR ESC";
-    self.offset_y += 100;
+    self.offset_y += 80;
     pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"turbo_hardware_item" withDelegate:self]autorelease];
     pbv1.tag=501;
     pbv1.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
     [view addSubview:pbv1];
     pbv1.valueString=@"TURBO";
-    self.offset_y += 100;
+    self.offset_y += 80;
     pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[2] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"turbo_software_item" withDelegate:self]autorelease];
     pbv1.tag=502;
     pbv1.desc = @{@"en":@"TO SHOW THE DEVICE INFORMATION",@"cn":@"显示设备信息"};
@@ -127,7 +127,11 @@ static ParamButtonView *g_pbv;
     pbv1.valueString=@"V1.1";
     
     /*tab 2*/
-    self.offset_y = 150;
+    if (IsiPhone5) {
+        self.offset_y = 150;
+    } else {
+        self.offset_y = 100;
+    }
     view=[tabView viewForIndex:1];
     ParamButtonView2 *pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"promode" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"modes"];
@@ -173,7 +177,11 @@ static ParamButtonView *g_pbv;
     pbv.valueString=@"6.0V";
     
     /*tab 3*/
-    self.offset_y = 150;
+    if (IsiPhone5) {
+        self.offset_y = 150;
+    } else {
+        self.offset_y = 100;
+    };
     view=[tabView viewForIndex:2];
     pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[3] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"punchrate1" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"punchrate1"];
@@ -210,7 +218,11 @@ static ParamButtonView *g_pbv;
     pbv.valueString=@"Linear";
     
     /*tab 4*/
-    self.offset_y = 150;
+    if (IsiPhone5) {
+        self.offset_y = 150;
+    } else {
+        self.offset_y = 100;
+    };
     view=[tabView viewForIndex:3];
     pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"initialbrake" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"initialbrake"];
@@ -261,7 +273,11 @@ static ParamButtonView *g_pbv;
     pbv.valueString=@"Linear";
     
     /*tab 5*/
-    self.offset_y = 150;
+    if (IsiPhone5) {
+        self.offset_y = 150;
+    } else {
+        self.offset_y = 100;
+    };
     view=[tabView viewForIndex:4];
     pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[3] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"boosttiming" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"boosttiming"];
@@ -298,7 +314,11 @@ static ParamButtonView *g_pbv;
     pbv.valueString=@"Linear";
     
     /*tab 6*/
-    self.offset_y = 150;
+    if (IsiPhone5) {
+        self.offset_y = 150;
+    } else {
+        self.offset_y = 100;
+    };
     view=[tabView viewForIndex:5];
     pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"turbotiming" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"turbotiming"];
@@ -342,7 +362,11 @@ static ParamButtonView *g_pbv;
     pbv.valueString=@"24deg/0.1S";
     
     /*tab 7*/
-    self.offset_y = 150;
+    if (IsiPhone5) {
+        self.offset_y = 150;
+    } else {
+        self.offset_y = 100;
+    };
     view=[tabView viewForIndex:6];
     pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"battminvoltage" withDelegate:self]autorelease];
     [pbv config:self.dict withName:@"battminvoltage"];
@@ -379,6 +403,13 @@ static ParamButtonView *g_pbv;
     self.BlackAreaHidden=NO;
     
     [self changeMode:modeIndex];
+    
+    if (!(IsiPhone5)) {
+        for (int i = 1; i <= 6; i++) {
+            UIView *tmp = [tabView viewForIndex:i];
+            tmp.transform = CGAffineTransformMakeScale(1, 0.7);
+        }
+    }
     
 //    testField = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, 320, 230)];
 //    testField.textColor = [UIColor blackColor];
@@ -479,8 +510,8 @@ static ParamButtonView *g_pbv;
     NSMutableData *data=[NSMutableData data];
     for (int i=1; i<7; i++) {
         UIView *view=[tabView viewForIndex:i];
-        for (ParamButtonView *pbv in view.subviews) {
-            if ([pbv isKindOfClass:[ParamButtonView class]]&&pbv.paramReadOnly==NO) {
+        for (ParamButtonView2 *pbv in view.subviews) {
+            if ([pbv isKindOfClass:[ParamButtonView2 class]]&&pbv.paramReadOnly==NO) {
                 [data appendData:[pbv postedDataWithMode:modeIndex]];
             }
         }
@@ -514,8 +545,8 @@ static ParamButtonView *g_pbv;
 -(void)returnToDefault{
     for (int i=1; i<7; i++) {
         UIView *view=[tabView viewForIndex:i];
-        for (ParamButtonView *pbv in view.subviews) {
-            if ([pbv isKindOfClass:[ParamButtonView class]]&&pbv.tag>=1000&&pbv.tag<2000) {
+        for (ParamButtonView2 *pbv in view.subviews) {
+            if ([pbv isKindOfClass:[ParamButtonView2 class]]&&pbv.tag>=1000&&pbv.tag<2000) {
                 [pbv returnToDefault];
             }
         }

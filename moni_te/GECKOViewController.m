@@ -87,7 +87,7 @@ static unsigned char result[9];
     pbv1.tag=500;
     [view addSubview:pbv1];
     pbv1.valueString=@"GECKO PLANE";
-    pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 120, self.pbvWidth, 65) withImageName:@"gec_hardware_item" withDelegate:self]autorelease];
+    pbv1=[[[ParamButtonView3 alloc]initWithFrame:CGRectMake([self.offsetXArray[1] intValue], 120, self.pbvWidth, 65) withImageName:@"gec_hardware_item_v2" withDelegate:self]autorelease];
     pbv1.tag=501;
     [view addSubview:pbv1];
     pbv1.valueString=@"ZTW GECKO";

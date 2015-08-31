@@ -97,13 +97,21 @@ static unsigned char result[9];
     pbv1.valueString=@"V1.01";
     
     /*tab 2*/
+//    if (IsiPhone5) {
+//        self.offset_y = 10;
+//    } else {
+//        self.offset_y = -40;
+//    }
+    ParamButtonView2 *pbv = nil;
+    view=[tabView viewForIndex:1];
     if (IsiPhone5) {
         self.offset_y = 10;
     } else {
-        self.offset_y = -40;
+        self.offset_y = 10;
+        CGRect rect2 = view.frame;
+        rect2.origin.y -= 35;
+        view.frame = rect2;
     }
-    ParamButtonView2 *pbv = nil;
-    view=[tabView viewForIndex:1];
     pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake([self.offsetXArray[0] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"brake" withDelegate:self]autorelease];
     pbv.tag=1000;
     [view addSubview:pbv];
@@ -226,6 +234,7 @@ static unsigned char result[9];
 //    ret[18]=0xd4;
 //    [[NetUtils sharedInstance] sendData:[NSData dataWithBytes:ret length:18] withDelegate:nil];
     [self sendSetData:[NSData dataWithBytes:ret length:18]];
+    [super onSet];
 }
 -(void)viewDidChanged:(int)index{
     if (index==0) {

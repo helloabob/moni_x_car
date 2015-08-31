@@ -154,6 +154,9 @@ static int old_y;
     }else{
     }
 }
+-(void)hideProgressDelay{
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+}
 -(void)returnToDefault{
     [self onSet];
 }
@@ -168,7 +171,8 @@ static int old_y;
     [MBProgressHUD showHUDAddedTo:self.view animated:NO];
 }
 -(void)onSet{
-    
+    [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+    [self performSelector:@selector(hideProgressDelay) withObject:nil afterDelay:1.5];
 }
 -(void)onExit{
     ExitViewController *vc=[[[ExitViewController alloc]init]autorelease];

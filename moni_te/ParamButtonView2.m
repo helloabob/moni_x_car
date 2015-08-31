@@ -208,7 +208,6 @@
          titleImageView 参数的标题图片类
          lblValue 参数的值
          */
-        
         _delegate=delegate;
         _titleImageName=[[NSString alloc] initWithString:imageName];
         

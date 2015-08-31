@@ -92,6 +92,8 @@ static unsigned char result[11];
     
 //    [[NetUtils sharedInstance] sendData:[NSData dataWithBytes:ret length:send_length*2] withDelegate:nil];
     [self sendSetData:[NSData dataWithBytes:ret length:send_length*2]];
+    
+    [super onSet];
 }
 - (void)viewDidLoad
 {
@@ -142,12 +144,17 @@ static unsigned char result[11];
     pbv1.valueString=@"V1.01";
     
     /*tab 2*/
+    
+    view=[tabView viewForIndex:1];
     if (IsiPhone5) {
         self.offset_y = 10;
     } else {
-        self.offset_y = -55;
+        self.offset_y = 10;
+        CGRect rect2 = view.frame;
+        rect2.origin.y -= 50;
+        view.frame = rect2;
+//        self.offset_y = -55;
     }
-    view=[tabView viewForIndex:1];
     ParamButtonView2 *pbv=[[[ParamButtonView2 alloc]initWithFrame:CGRectMake(5+[self.offsetXArray[1] intValue], self.offset_y, self.pbvWidth, 65) withImageName:@"runningmode" withDelegate:self]autorelease];
     pbv.tag=2;
     [view addSubview:pbv];

@@ -522,6 +522,7 @@ static ParamButtonView *g_pbv;
     
 //    [[NetUtils sharedInstance] sendData:data withDelegate:nil];
     [self sendSetData:data];
+    [super onSet];
 }
 -(void)viewDidChanged:(int)index{
     currentTabIndex=index;

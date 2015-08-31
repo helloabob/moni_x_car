@@ -26,7 +26,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
         panel=[[[UIView alloc]initWithFrame:CGRectMake(0, 38, frame.size.width, frame.size.height-38)]autorelease];
         [self addSubview:panel];
         
@@ -79,7 +78,7 @@
 //    [self addSubview:tabMenuBar];
     
     /**/
-    tabMenuBar = [[[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, 60)]autorelease];
+    tabMenuBar = [[[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, numberOfTabs==3?38:60)]autorelease];
     int itemWidth = screenWidth / 4;
     if (numberOfTabs==3) {
         UIImageView *igv = [[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"top_line"]] autorelease];

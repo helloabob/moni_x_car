@@ -38,4 +38,5 @@
 -(void)onRead;
 -(BOOL)didReceiveData:(NSData *)data;
 -(void)didNotReceive;
+-(void)onSet;
 @end

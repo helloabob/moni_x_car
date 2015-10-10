@@ -70,8 +70,8 @@ static ParamButtonView *g_pbv;
     unsigned char *tmp=self.bufferData.bytes;
     for (int i=1; i<7; i++) {
         UIView *view=[tabView viewForIndex:i];
-        for (ParamButtonView *pbv in view.subviews) {
-            if ([pbv isKindOfClass:[ParamButtonView class]]&&pbv.tag>=1000&&pbv.tag<2000) {
+        for (ParamButtonView2 *pbv in view.subviews) {
+            if ([pbv isKindOfClass:[ParamButtonView2 class]]&&pbv.tag>=1000&&pbv.tag<2000) {
                 [pbv setKeyWithResponseBytes:tmp];
             }
         }
@@ -537,7 +537,7 @@ static ParamButtonView *g_pbv;
         [self showAlert];
         return NO;
     }else if(index==3){
-        [self changeSettingY:20];
+        [self changeSettingY:0];
     }else{
         [self changeSettingY:0];
     }
